@@ -1,3 +1,7 @@
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
+
 prompt adam1
 alias l='ls -la'
 alias v='vim'
