@@ -9,7 +9,7 @@ export DAC=`lsusb | grep "Texas Instruments PCM2902 Audio Codec" | sed -r "s/^Bu
 # Looking Glass
 touch /dev/shm/looking-glass
 chown jakob:kvm /dev/shm/looking-glass
-chmod 660 /dev/shm/looking-glass
+chmod 666 /dev/shm/looking-glass
 
 # Avalanche Studios edge case
 echo 1 > /sys/module/kvm/parameters/ignore_msrs
