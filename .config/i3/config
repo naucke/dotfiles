@@ -91,6 +91,8 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+for_window [title="Tor Browser$"] floating enable
+
 for_window [class="^.*"] border pixel 2
 gaps inner 10
 gaps outer 15
