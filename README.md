@@ -1,2 +1,2 @@
 # dotfiles
-Dotfiles for my mild Arch rice
+Dotfiles for my mild Gentoo rice
