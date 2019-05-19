@@ -1,9 +1,10 @@
 URxvt.background: black
 URxvt.foreground: white
-URxvt.font: xft:IBM Plex Mono:size=10
+URxvt.font: xft:IBM Plex Mono:pixelsize=12
 URxvt.scrollBar: false
 URxvt.transparent: true
-URxvt.shading: 20
+URxvt.shading: 50
+URxvt.blurRadius: 5
 URxvt.perl-ext-common: resize-font
 URxvt.resize-font.smaller: C-minus
 URxvt.resize-font.bigger: C-plus
