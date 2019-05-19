@@ -5,4 +5,5 @@ URxvt.scrollBar: false
 URxvt.transparent: true
 URxvt.shading: 50
 URxvt.blurRadius: 5
-URxvt.perl-ext-common: font-size
+URxvt.perl-ext-common: default,matcher,font-size
+URxvt.url-launcher: firefox
