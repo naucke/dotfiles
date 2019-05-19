@@ -5,6 +5,4 @@ URxvt.scrollBar: false
 URxvt.transparent: true
 URxvt.shading: 50
 URxvt.blurRadius: 5
-URxvt.perl-ext-common: resize-font
-URxvt.resize-font.smaller: C-minus
-URxvt.resize-font.bigger: C-plus
+URxvt.perl-ext-common: font-size
