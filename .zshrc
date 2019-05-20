@@ -3,7 +3,8 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 alias l="ls -la"
-alias susp="sudo pm-suspend && xlock -mode blank"
+alias lock="xlock -mode blank"
+alias susp="sudo pm-suspend && lock"
 alias config='git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 alias update="sudo emerge-webrsync"
