@@ -4,4 +4,4 @@ numlockx on
 xsetroot -name "f"
 
 nitrogen --restore&
-pgrep redshift -l 49:8 &> /dev/null || redshift -l 49:8 &> /dev/null &
+redshift > /dev/null 2>&1 &
