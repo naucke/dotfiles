@@ -1,6 +1,17 @@
-if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
-  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
-fi
+export PATH="/home/jakob/.local/bin:$PATH"
+
+export ZSH="/home/jakob/.oh-my-zsh"
+ENABLE_CORRECTION="true"
+COMPLETION_WAITING_DOTS="true"
+DISABLE_UNTRACKED_FILES_DIRTY="true"
+plugins=(command-not-found last-working-dir thefuck vi-mode zsh-autosuggestions zsh-syntax-highlighting)
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(brackets line main pattern regexp root)
+source $ZSH/oh-my-zsh.sh
+
+autoload -U compinit
+compinit
+
+export PS1="%F{green}%B%K{green}█▓▒░%F{white}%K{green}%n@%m%F{green}%K{txtrst}█▓▒░ %F{green}%B%~ %% "
 
 alias l="ls -la"
 alias lock="xlock -mode blank"
