@@ -4,4 +4,5 @@ numlockx on
 xsetroot -name "f"
 
 ~/.fehbg &
+compton &
 redshift > /dev/null 2>&1 &
