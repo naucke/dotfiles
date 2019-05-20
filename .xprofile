@@ -1,5 +1,6 @@
-numlockx on
+setxkbmap de
 setxkbmap -option caps:swapescape
-xset -b
+numlockx on
+
 nitrogen --restore&
 pgrep redshift -l 49:8 &> /dev/null || redshift -l 49:8 &> /dev/null &
