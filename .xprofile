@@ -3,5 +3,5 @@ setxkbmap -option caps:swapescape
 numlockx on
 xsetroot -name "f"
 
-nitrogen --restore&
+~/.fehbg &
 redshift > /dev/null 2>&1 &
