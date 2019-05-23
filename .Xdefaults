@@ -1,12 +1,13 @@
 URxvt.background: black
 URxvt.foreground: white
-URxvt.font: xft:IBM Plex Mono:pixelsize=12
+URxvt.font: xft:IBM Plex Mono:pixelsize=13
 URxvt.scrollBar: false
 URxvt.transparent: true
-URxvt.shading: 50
+URxvt.shading: 30
 URxvt.blurRadius: 5
 URxvt.perl-ext-common: default,matcher,font-size
 URxvt.url-launcher: firefox
+URxvt.matcher.button: 1
 
 URxvt.color: #2E3436
 URxvt.color1: #a40000
