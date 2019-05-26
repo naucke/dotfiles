@@ -1,8 +1,8 @@
 setxkbmap de
 setxkbmap -option caps:swapescape
 numlockx on
-xsetroot -name "f"
 
 ~/.fehbg &
+slstatus &
 compton &
 redshift > /dev/null 2>&1 &
