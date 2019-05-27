@@ -13,7 +13,7 @@ compinit
 
 export PS1="%F{green}%B%K{green}█▓▒░%F{white}%K{green}%n@%m%F{green}%K{txtrst}█▓▒░ %F{green}%B%~ %% "
 
-alias l="ls -la"
+alias l="ls -lha"
 alias lock="xlock -mode blank"
 alias susp="sudo pm-suspend && lock"
 alias config='git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
