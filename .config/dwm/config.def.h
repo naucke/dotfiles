@@ -1,5 +1,5 @@
 /* See LICENSE file for copyright and license details. */
-#define NUMCOLORS 9
+#define NUMCOLORS 11
 
 /* appearance */
 static const char *fonts[]          = { "Unifont:size=12", "Font Awesome 5 Free Solid:size=8", "Siji:size=12" };
@@ -16,15 +16,17 @@ static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char colors[NUMCOLORS][MAXCOLORS][8] = {
-	{ "#444444", "#bbbbbb", "#bc561e" },
-	{ "#444444", "#bbbbbb", "#a94f1a" },
-	{ "#444444", "#bbbbbb", "#954817" },
-	{ "#444444", "#bbbbbb", "#824213" },
-	{ "#444444", "#bbbbbb", "#6d3c0f" },
-	{ "#444444", "#bbbbbb", "#5c350b" },
-	{ "#444444", "#bbbbbb", "#482f08" },
-	{ "#444444", "#bbbbbb", "#352804" },
 	{ "#444444", "#bbbbbb", "#222222" },
+	{ "#ce5c00", "#eeeeee", "#ce5c00" },
+	{ "#000000", "#eeeeee", "#bc561e" },
+	{ "#000000", "#eeeeee", "#a94f1a" },
+	{ "#000000", "#eeeeee", "#954817" },
+	{ "#000000", "#eeeeee", "#824213" },
+	{ "#000000", "#eeeeee", "#6d3c0f" },
+	{ "#000000", "#eeeeee", "#5c350b" },
+	{ "#000000", "#eeeeee", "#482f08" },
+	{ "#000000", "#eeeeee", "#352804" },
+	{ "#000000", "#eeeeee", "#222222" },
 };
 
 /* tagging */
