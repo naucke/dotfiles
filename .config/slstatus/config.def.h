@@ -63,11 +63,13 @@ static const char unknown_str[] = "n/a";
  */
 static const struct arg args[] = {
 	/* function format          argument */
-	{ netspeed_tx, "↑ %s",       "enp3s0"                                                    },
-	{ netspeed_rx, "↓ %s",       "enp3s0"                                                    },
-	{ cpu_perc,    "CPU %s%%/",  NULL                                                        },
-	{ temp,        "%s°C ",      "/sys/devices/platform/coretemp.0/hwmon/hwmon1/temp1_input" },
-	{ ram_perc,    "RAM %s%% ",  NULL                                                        },
-	{ disk_perc,   "/ %s%% ",    "/"                                                         },
-	{ datetime,    "%s",         "%a %d %b %Y %T"                                            },
+	{ netspeed_tx, "\x01\uE060%s",    "enp3s0"                                                    },
+	{ netspeed_rx, "\x02\uE061%s",    "enp3s0"                                                    },
+	{ cpu_perc,    "\x03\uE020%s%%",  NULL                                                        },
+	{ temp,        "\x04\uE01C%s°C",  "/sys/devices/platform/coretemp.0/hwmon/hwmon1/temp1_input" },
+	{ ram_perc,    "\x05\uE003%s%%",  NULL                                                        },
+	{ disk_perc,   "\x06\uF2DB %s%%", "/"                                                         },
+	{ disk_perc,   "\x07\uF0A0 %s%%", "/mnt/HDD"                                                  },
+	{ datetime,    "\x08\uE26A%s",    "%a %d %b %Y"                                               },
+	{ datetime,    "\x09\uE015%s",    "%T"                                                        },
 };
