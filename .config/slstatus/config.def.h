@@ -69,7 +69,7 @@ static const struct arg args[] = {
 	{ temp,        "\x06\uE01C%s°C",  "/sys/devices/platform/coretemp.0/hwmon/hwmon1/temp1_input" },
 	{ ram_perc,    "\x07\uE003%s%%",  NULL                                                        },
 	{ disk_perc,   "\x08\uF2DB %s%%", "/"                                                         },
-	{ disk_perc,   "\x09\uF0A0 %s%%", "/mnt/HDD"                                                  },
+	{ disk_perc,   "\x09\uF0A0 %s%%", "/mnt/vera1"                                                },
 	{ datetime,    "\x0A\uE26A%s",    "%a %d %b %Y"                                               },
 	{ datetime,    "\x0B\uE015%s",    "%T"                                                        },
 };
