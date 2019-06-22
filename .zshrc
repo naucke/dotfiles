@@ -24,4 +24,5 @@ alias upgrade="echo 'Remember to upgrade your /usr/local regularly' && sudo emer
 alias pkgcl="sudo emerge -a --depclean"
 alias srccl="sudo eclean-dist -d"
 
+sed -i "/^: [0-9]*:0;mpv/d" ~/.zsh_history
 neofetch
