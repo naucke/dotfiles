@@ -1,5 +1,6 @@
 setxkbmap de
 setxkbmap -option caps:swapescape
+xmodmap -e "keycode 91 = period period"
 numlockx on
 
 ~/.fehbg &
