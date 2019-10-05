@@ -1,3 +1,4 @@
+lyrics_directory = /tmp/ncmpcpp_lyrics
 mpd_host = /var/lib/mpd/socket
 mpd_port = 6600
 mpd_music_dir = ~/Music
@@ -6,6 +7,7 @@ visualizer_output_name = my_fifo
 visualizer_sync_interval = 10
 visualizer_in_stereo = yes
 visualizer_type = spectrum
-visualizer_look = +■
+visualizer_look = +█ 
+follow_now_playing_lyrics=yes
 display_bitrate = yes
 user_interface = alternative
