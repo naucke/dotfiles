@@ -23,7 +23,7 @@ fi
 autoload -U compinit
 compinit
 
-export PS1="%F{green}%B%K{green}█▓▒░%F{white}%K{green}%n@%m%F{green}%K{txtrst}█▓▒░ %F{green}%B%~ %% "
+PS1="%F{green}%B%K{green}█▓▒░%F{white}%K{green}%n@%m%F{green}%K{txtrst}█▓▒░ %F{green}%B%~ %% "
 
 alias l="ls -lha"
 alias v="vim"
