@@ -17,6 +17,10 @@ export PS1="%F{green}%B%K{green}█▓▒░%F{white}%K{green}%n@%m%F{green}%K{t
 alias l="ls -lha"
 alias v="vim"
 alias r="ranger"
+
+alias cp="cp -i"
+alias mv="mv -i"
+
 alias lock="xlock -mode blank"
 alias susp="sudo pm-suspend && lock"
 alias config='git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
