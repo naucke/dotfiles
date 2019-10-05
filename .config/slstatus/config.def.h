@@ -70,6 +70,6 @@ static const struct arg args[] = {
 	{ ram_perc,    "\x07\uE003%s%%",  NULL                                                        },
 	{ disk_perc,   "\x08\uF2DB %s%%", "/"                                                         },
 	{ disk_perc,   "\x09\uF0A0 %s%%", "/mnt/vera1"                                                },
-	{ datetime,    "\x0A\uE26A%s",    "%a %d %b %Y"                                               },
-	{ datetime,    "\x0B\uE015%s",    "%T"                                                        },
+	{ datetime,    "\x0A\uE26A%s",    "%a %-d %b"                                                 },
+	{ datetime,    "\x0B\uE015%s",    "%-H:%M:%S"                                                 },
 };
