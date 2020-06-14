@@ -9,17 +9,14 @@ Plugin 'Valloric/YouCompleteMe'
 call vundle#end()
 filetype plugin indent on
 
-set laststatus=2
 let g:lightline = {'colorscheme': 'solarized'}
 
+set laststatus=2
 set number
-
 set smartcase
 set incsearch
 set nohlsearch
-
 set spelllang=en,de
-
 set tabstop=2
 set shiftwidth=2
 set expandtab
