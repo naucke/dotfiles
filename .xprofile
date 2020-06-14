@@ -6,4 +6,4 @@ numlockx on
 ~/.fehbg &
 slstatus &
 compton &
-redshift > /dev/null 2>&1 &
+redshift &
