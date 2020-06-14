@@ -42,5 +42,8 @@ alias upgrade="echo 'Remember to upgrade your /usr/local, Python & Node indices 
 alias pkgcl="sudo emerge --ask --depclean"
 alias srccl="sudo eclean-dist --deep"
 
+alias boincsusp="sh -c 'cd ~/Documents/BOINC && boinccmd --set_run_mode never'"
+alias boincres="sh -c 'cd ~/Documents/BOINC && boinccmd --set_run_mode auto'"
+
 sed -i "/^: [0-9]*:0;mpv/d" ~/.zsh_history
 neofetch
