@@ -16,6 +16,7 @@ set number
 
 set smartcase
 set incsearch
+set nohlsearch
 
 set spelllang=en,de
 
