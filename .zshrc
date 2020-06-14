@@ -23,6 +23,7 @@ fi
 autoload -U compinit
 compinit
 
+export THREADS=8
 PS1="%F{green}%B%K{green}█▓▒░%F{white}%K{green}%n@%m%F{green}%K{txtrst}█▓▒░ %F{green}%B%~ %% "
 
 alias l="ls -lha"
