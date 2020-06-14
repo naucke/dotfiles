@@ -26,21 +26,21 @@ compinit
 export THREADS=8
 PS1="%F{green}%B%K{green}█▓▒░%F{white}%K{green}%n@%m%F{green}%K{txtrst}█▓▒░ %F{green}%B%~ %% "
 
-alias l="ls -lha"
+alias l="ls -l --human-readable --all"
 alias v="vim"
 alias r="ranger"
 
-alias cp="cp -i"
-alias mv="mv -i"
+alias cp="cp --interactive"
+alias mv="mv --interactive"
 
 alias lock="xlock -mode blank"
 alias susp="sudo pm-suspend && lock"
 alias config='git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 alias update="sudo emerge-webrsync"
-alias upgrade="echo 'Remember to upgrade your /usr/local regularly' && sudo emerge -avuDN --keep-going --with-bdeps=y @world"
-alias pkgcl="sudo emerge -a --depclean"
-alias srccl="sudo eclean-dist -d"
+alias upgrade="echo 'Remember to upgrade your /usr/local, Python & Node indices regularly' && sudo emerge --ask --verbose --update --deep --newuse --keep-going --with-bdeps=y @world"
+alias pkgcl="sudo emerge --ask --depclean"
+alias srccl="sudo eclean-dist --deep"
 
 sed -i "/^: [0-9]*:0;mpv/d" ~/.zsh_history
 neofetch
