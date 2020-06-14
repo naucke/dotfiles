@@ -4,7 +4,6 @@ xmodmap -e "keycode 91 = period period"
 numlockx on
 
 ~/.fehbg &
-slstatus &
 compton &
 redshift &
 boinc --dir ~/Documents/BOINC &
