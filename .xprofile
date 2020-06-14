@@ -7,3 +7,4 @@ numlockx on
 slstatus &
 compton &
 redshift &
+boinc --dir ~/Documents/BOINC &
