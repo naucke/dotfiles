@@ -82,5 +82,5 @@ bar {
         status_command exec ~/.config/i3status/net-speed.sh # i3status
 }
 
-workspace 1 output HDMI-2
+workspace 1 output HDMI2
 client.focused $main $main #ffffff $accent $accent
