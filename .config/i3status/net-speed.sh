@@ -38,7 +38,7 @@ update_rate() {
 
   local interval=$(( $time - $last_time ))
   if [ $interval -gt 0 ]; then
-    rate=" $(readable $(( (tx - last_tx) / interval ))) |  $(readable $(( (rx - last_rx) / interval )))"
+    rate=" $(readable $(( (tx - last_tx) / interval ))) |  $(readable $(( (rx - last_rx) / interval )))"
   else
     rate=""
   fi
