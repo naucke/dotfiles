@@ -36,11 +36,7 @@ alias mv="mv --interactive"
 alias lock="i3lock --image ~/Desktop/Desktop.png"
 alias susp="lock && systemctl suspend"
 alias config='git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
-
-alias update="sudo emerge-webrsync"
-alias upgrade="echo 'Remember to upgrade your /usr/local, Python & Node indices regularly' && sudo emerge --ask --verbose --update --deep --newuse --keep-going --with-bdeps=y @world"
-alias pkgcl="sudo emerge --ask --depclean"
-alias srccl="sudo eclean-dist --deep"
+alias pkgcl="sudo pacman -Rcs $(pacman -Qdtq)"
 
 alias boincsusp="sh -c 'cd ~/Documents/BOINC && boinccmd --set_run_mode never'"
 alias boincres="sh -c 'cd ~/Documents/BOINC && boinccmd --set_run_mode auto'"
