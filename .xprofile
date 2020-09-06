@@ -6,6 +6,5 @@ xset m 0 0
 xset -b
 
 ~/.fehbg &
-compton &
 redshift &
 boinc --dir ~/Documents/BOINC &
