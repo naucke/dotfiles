@@ -10,11 +10,13 @@ filetype plugin indent on
 
 let g:lightline = {'colorscheme': 'solarized'}
 
+syntax on
 set laststatus=2
 set number
 set smartcase
 set incsearch
 set nohlsearch
+set mouse=
 set spelllang=en,de
 set tabstop=2
 set shiftwidth=2
