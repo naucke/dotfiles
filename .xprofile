@@ -7,4 +7,3 @@ xset -b
 
 ~/.fehbg &
 redshift &
-boinc --dir ~/Documents/BOINC &
