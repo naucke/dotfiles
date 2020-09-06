@@ -41,5 +41,4 @@ alias pkgcl="sudo pacman -Rcs $(pacman -Qdtq)"
 alias boincsusp="sh -c 'cd ~/Documents/BOINC && boinccmd --set_run_mode never'"
 alias boincres="sh -c 'cd ~/Documents/BOINC && boinccmd --set_run_mode auto'"
 
-sed -i "/^: [0-9]*:0;mpv/d" ~/.zsh_history
 neofetch
