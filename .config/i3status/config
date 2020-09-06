@@ -12,20 +12,20 @@ order += "tztime date"
 order += "tztime time"
 
 cpu_usage {
-        format = " %usage"
+        format = " %usage"
 }
 
 cpu_temperature 0 {
-        format = " %degrees°C"
+        format = " %degrees°C"
         path = /sys/devices/platform/coretemp.0/hwmon/hwmon1/temp1_input
 }
 
 memory {
-        format = " %percentage_used"
+        format = " %percentage_used"
 }
 
 disk / {
-        format = " %percentage_used_of_avail"
+        format = " %percentage_used_of_avail"
 }
 
 disk /mnt/vera1 {
@@ -33,9 +33,9 @@ disk /mnt/vera1 {
 }
 
 tztime date {
-        format = " %a %-d %b"
+        format = " %a %-d %b"
 }
 
 tztime time {
-        format = " %-H:%M:%S"
+        format = " %-H:%M:%S"
 }
