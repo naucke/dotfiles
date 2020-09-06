@@ -33,8 +33,8 @@ alias r="ranger"
 alias cp="cp --interactive"
 alias mv="mv --interactive"
 
-alias lock="i3lock --image ~/Documents/Desktop.png"
-alias susp="lock && sudo pm-suspend"
+alias lock="i3lock --image ~/Desktop/Desktop.png"
+alias susp="lock && systemctl suspend"
 alias config='git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 alias update="sudo emerge-webrsync"
