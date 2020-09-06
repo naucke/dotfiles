@@ -1,5 +1,5 @@
 lyrics_directory = /tmp/ncmpcpp_lyrics
-mpd_host = /var/lib/mpd/socket
+mpd_host = ~/.config/mpd/socket
 mpd_port = 6600
 mpd_music_dir = ~/Music
 visualizer_fifo_path = /tmp/mpd.fifo
