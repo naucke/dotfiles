@@ -16,7 +16,7 @@ set number
 set smartcase
 set incsearch
 set nohlsearch
-set mouse=
+set ttymouse=
 set spelllang=en,de
 set tabstop=2
 set shiftwidth=2
