@@ -11,3 +11,4 @@ visualizer_look = +█
 follow_now_playing_lyrics = yes
 display_bitrate = yes
 user_interface = alternative
+autocenter_mode = yes
