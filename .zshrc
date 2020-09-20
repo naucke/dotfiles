@@ -43,8 +43,9 @@ alias r="ranger"
 alias cp="cp --interactive"
 alias mv="mv --interactive"
 
-alias lock="i3lock --image ~/Desktop/Desktop.png"
-alias susp="lock && systemctl suspend"
+alias lock_screenon="i3lock --image ~/Desktop/Desktop.png"
+alias lock="lock_screenon && xset dpms force off"
+alias susp="lock_screenon && systemctl suspend"
 alias config='git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias pkgcl="sudo pacman -Rcs $(pacman -Qdtq)"
 
