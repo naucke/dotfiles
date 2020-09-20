@@ -49,7 +49,7 @@ alias susp="lock_screenon && systemctl suspend"
 alias config='git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias pkgcl='sudo pacman -Rcs $(pacman -Qdtq)'
 
-alias boincsusp="sh -c 'cd ~/Documents/BOINC && boinccmd --set_run_mode never'"
-alias boincres="sh -c 'cd ~/Documents/BOINC && boinccmd --set_run_mode auto'"
+alias boincsusp="sh -c 'cd /var/lib/boinc && boinccmd --set_run_mode never'"
+alias boincres="sh -c 'cd /var/lib/boinc && boinccmd --set_run_mode auto'"
 
 neofetch
