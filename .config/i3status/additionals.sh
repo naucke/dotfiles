@@ -8,6 +8,8 @@ last_rx=0
 last_tx=0
 rate=""
 
+load=""
+
 readable() {
   local bytes=$1
   local kib=$(( bytes >> 10 ))
@@ -48,9 +50,32 @@ update_rate() {
   last_tx=$tx
 }
 
-i3status | (read line && echo "$line" && read line && echo "$line" && read line && echo "$line" && update_rate && while :
+get_metric() {
+  grep $2 <<< $1 | awk '{print $NF}'
+}
+
+update_load() {
+  local metrics=$(curl --max-time 1 localhost:9101/metrics/)
+  if [ ! $metrics ]
+  then
+    load=""
+    return
+  fi
+
+  local util=$(printf "%02d%%" $(get_metric "$metrics" utilization_gpu))
+  local temp=$(printf "%02d°C" $(get_metric "$metrics" temperature_gpu))
+
+  local used=$(get_metric "$metrics" memory_used)
+  local total=$(get_metric "$metrics" memory_total)
+  local usage=$(printf "%.1f%%" $(bc -l <<< "100 * $used / $total"))
+
+  load="  $util |  $temp |  $usage |"
+}
+
+i3status | (while :
 do
   read line
   update_rate
-  echo "${rate} | ${line}" || exit 1
+  update_load
+  echo "$rate |$load $line" || exit 1
 done)
