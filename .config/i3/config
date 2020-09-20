@@ -78,8 +78,8 @@ bar {
                 focused_workspace $accent $main #ffffff
         }
         position top
-        font pango:IBM Plex Mono, Font Awesome 5 Free Solid, Siji 10
-        status_command exec ~/.config/i3status/net-speed.sh # i3status
+        font pango:IBM Plex Mono, Font Awesome 5 Free Solid 10
+        status_command exec ~/.config/i3status/additionals.sh
 }
 
 workspace 1 output HDMI2
