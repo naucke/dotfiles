@@ -25,11 +25,11 @@ memory {
 }
 
 disk / {
-        format = " %percentage_used_of_avail"
+        format = " %percentage_used"
 }
 
 disk /mnt/vera1 {
-        format = " %percentage_used_of_avail"
+        format = " %percentage_used"
 }
 
 tztime date {
