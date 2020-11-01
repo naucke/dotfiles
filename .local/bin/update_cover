@@ -1,0 +1,95 @@
+#!/usr/bin/env python
+
+import base64
+import io
+import os
+import sys
+
+import mpd
+import mutagen
+import PIL.Image, PIL.ImageFilter, PIL.ImageOps
+
+def parse_setting(line):
+    key, value = line.split("=")
+    return key.strip(), os.path.expanduser(value.strip())
+
+def exit_default_desktop():
+    set_desktop(settings["default_desktop"])
+    sys.exit()
+
+def set_desktop(filename):
+    os.system(f"feh --no-fehbg --bg-tile '{filename}'")
+
+def close_client():
+    client.close()
+    client.disconnect()
+
+def extract_cover(filename):
+    audio = mutagen.File(filename)
+    try:
+        if isinstance(audio, mutagen.mp3.MP3):
+            return audio.tags["APIC:"].data
+        if isinstance(audio, mutagen.mp4.MP4):
+            return audio.tags["covr"][0]
+        if isinstance(audio, mutagen.flac.FLAC):
+            return audio.pictures[0].data
+        if isinstance(audio, mutagen.ogg.OggFileType):
+            if "coverart" in audio.tags:
+                raw = audio.tags["coverart"][0].encode("ascii")
+                return base64.b64decode(raw)
+            else:
+                raw = audio.tags["metadata_block_picture"][0]
+                return mutagen.flac.Picture(base64.b64decode(raw)).data
+    except (KeyError, IndexError):
+        exit_default_desktop()
+
+def insert_cover(cover):
+    hstart, vstart, frame_width, frame_height = \
+            (int(settings.get(key)) for key in ("hstart", "vstart",
+                                                "width", "height"))
+    cover_width, cover_height = cover.size
+    frame_ratio = frame_width / frame_height
+    cover_ratio = cover_width / cover_height
+    scalar = frame_height / cover_height   # pillarboxed
+    bg_scalar = frame_width / cover_width  # zoom for background blur
+    start = (hstart +
+             int((frame_ratio - cover_ratio) / 2 * frame_height), vstart)
+    bg_start = (hstart, vstart +
+                int((1 / frame_ratio - 1 / cover_ratio) / 2 * frame_width))
+    if frame_ratio < cover_ratio:  # letterboxed
+        scalar, bg_scalar = bg_scalar, scalar
+        start, bg_start = bg_start, start
+    with PIL.Image.open(settings["default_desktop"]) as desktop:
+        scaled = PIL.ImageOps.scale(cover, scalar)
+        background = PIL.ImageOps.scale(cover, bg_scalar)
+        blurred = background.filter(PIL.ImageFilter.GaussianBlur(10))
+        desktop.paste(blurred, box=bg_start)
+        desktop.paste(scaled, box=start)
+        desktop.save(tmp_desktop, compress_level=0)
+
+settings_list = ["hstart", "vstart", "width", "height", "default_desktop",
+                 "mpd_host", "mpd_port", "mpd_music_dir"]
+settings = {key: None for key in settings_list}
+tmp_desktop = "/tmp/Desktop.png"
+
+if __name__ == "__main__":
+    for filename in sys.argv[1:]:
+        with open(filename, "r") as f:
+            for line in f.readlines():
+                key, value = parse_setting(line)
+                if key in settings:
+                    settings[key] = value
+
+    client = mpd.MPDClient()
+    client.connect(settings["mpd_host"], settings["mpd_port"])
+    if client.status()["state"] in ("pause", "stop"):
+        close_client()
+        exit_default_desktop()
+
+    current_song = os.path.join(settings["mpd_music_dir"],
+                                client.currentsong()["file"])
+    close_client()
+    cover_bytes = io.BytesIO(extract_cover(current_song))
+    with PIL.Image.open(cover_bytes) as cover:
+        insert_cover(cover)
+    set_desktop(tmp_desktop)
