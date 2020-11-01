@@ -8,3 +8,4 @@ xset -b
 
 ~/.fehbg &
 redshift &
+joystickwake &
