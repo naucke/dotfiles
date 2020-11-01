@@ -13,6 +13,7 @@ let g:lightline = {'colorscheme': 'solarized'}
 syntax on
 set laststatus=2
 set number
+set showcmd
 set smartcase
 set incsearch
 set nohlsearch
