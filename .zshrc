@@ -34,6 +34,7 @@ autoload -U compinit
 compinit
 
 export THREADS=8
+export MAKEFLAGS="-j$THREADS"
 PS1="%F{red}%(?..%? )%F{green}%B%K{green}█▓▒░%F{white}%K{green}%n@%m%F{green}%K{txtrst}█▓▒░ %F{green}%B%~ %% "
 
 alias l="ls -l --human-readable --all"
