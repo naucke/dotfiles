@@ -37,9 +37,10 @@ export THREADS=8
 export MAKEFLAGS="-j$THREADS"
 PS1="%F{red}%(?..%? )%F{green}%B%K{green}█▓▒░%F{white}%K{green}%n@%m%F{green}%K{txtrst}█▓▒░ %F{green}%B%~ %% "
 
+alias j="joplin"
 alias l="ls -l --human-readable --all"
-alias v="vim"
 alias r="ranger"
+alias v="vim"
 
 alias cp="cp --interactive"
 alias mv="mv --interactive"
