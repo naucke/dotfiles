@@ -1,10 +1,12 @@
-source /etc/X11/xrandr
 setxkbmap de
 setxkbmap -option caps:swapescape
 xmodmap -e "keycode 91 = period period"
 numlockx on
 xset m 0 0
 xset -b
+
+source /etc/X11/xrandr
+export QT_QPA_PLATFORMTHEME=qt5ct
 
 ~/.fehbg &
 redshift &
