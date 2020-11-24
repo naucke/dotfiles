@@ -1,0 +1,3 @@
+#!/bin/bash
+pipe=/tmp/ncmpcpp_coverd
+[ -p $pipe ] && echo x >> $pipe

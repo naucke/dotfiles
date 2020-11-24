@@ -8,6 +8,7 @@ xset -b
 source /etc/X11/xrandr
 export QT_QPA_PLATFORMTHEME=qt5ct
 
+~/.local/bin/ncmpcpp_coverd &
 ~/.fehbg &
 redshift &
 joystickwake &

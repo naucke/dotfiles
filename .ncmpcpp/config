@@ -12,5 +12,5 @@ follow_now_playing_lyrics = yes
 display_bitrate = yes
 user_interface = alternative
 autocenter_mode = yes
-execute_on_song_change = ~/.local/bin/update_cover ~/.ncmpcpp/config ~/.config/boundaries.conf
-execute_on_player_state_change = ~/.local/bin/update_cover ~/.ncmpcpp/config ~/.config/boundaries.conf
+execute_on_song_change = ~/.local/bin/update_coverd
+execute_on_player_state_change = ~/.local/bin/update_coverd
