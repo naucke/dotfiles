@@ -4,6 +4,7 @@ URxvt.font: xft:IBM Plex Mono:pixelsize=13
 URxvt.scrollBar: false
 URxvt.transparent: true
 URxvt.shading: 30
+URxvt.blurRadius: 5
 URxvt.perl-ext-common: default,matcher,font-size
 URxvt.url-launcher: firefox
 URxvt.matcher.button: 1
