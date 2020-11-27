@@ -55,7 +55,7 @@ get_metric() {
 }
 
 update_load() {
-  local metrics=$(curl localhost:9101/metrics/ 2> /dev/null)
+  local metrics=$(curl --max-time .5 localhost:9101/metrics/ 2> /dev/null)
   if [ ! $metrics ]
   then
     load=""
