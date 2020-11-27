@@ -50,7 +50,6 @@ alias lock="lock_screenon && xset dpms force off"
 alias susp="lock_screenon && systemctl suspend"
 alias config='git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
-alias pip_upgrade='pip list --outdated --format=freeze | grep --invert-match "^\-e" | cut --delimiter== --fields=1 | xargs --max-args=1 pip install --upgrade'
 alias pkgcl='sudo pacman --remove --cascade --recursive $(pacman --query --deps --quiet --unrequired --unrequired)'
 
 alias boincsusp="sh -c 'cd /var/lib/boinc && boinccmd --set_run_mode never'"
