@@ -39,6 +39,8 @@ PS1="%F{red}%(?..%? )%F{green}%B%K{green}█▓▒░%F{white}%K{green}%n@%m%F{g
 
 alias j="joplin"
 alias l="ls -l --human-readable --all"
+alias m="mutt"
+alias n="ncmpcpp"
 alias r="ranger"
 alias v="vim"
 
