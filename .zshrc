@@ -43,6 +43,7 @@ alias m="mutt"
 alias n="ncmpcpp"
 alias r="ranger"
 alias v="vim"
+alias y="yay"
 
 alias cp="cp --interactive"
 alias mv="mv --interactive"
