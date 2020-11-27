@@ -1,5 +1,6 @@
 source ~/.mutt/muttrc.priv
 bind generic,alias,attach,browser,editor,index,compose,pager,pgp,postpone ':' noop
+color normal white default
 
 set ssl_force_tls    = yes
 set header_cache     = ~/.cache/mutt
