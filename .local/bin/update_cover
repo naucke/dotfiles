@@ -73,9 +73,6 @@ settings = {key: None for key in settings_list}
 tmp_desktop = "/tmp/Desktop.png"
 
 if __name__ == "__main__":
-    if os.getenv("DISPLAY") is None:
-        sys.exit()
-
     for filename in sys.argv[1:]:
         with open(filename, "r") as f:
             for line in f.readlines():
