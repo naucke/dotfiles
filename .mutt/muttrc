@@ -6,6 +6,7 @@ set ssl_force_tls    = yes
 set header_cache     = ~/.cache/mutt
 set message_cachedir = ~/.cache/mutt
 set timeout          = 60
+set editor           = "vim +':set textwidth=0'"
 
 set imap_check_subscribed
 set spoolfile = +INBOX
