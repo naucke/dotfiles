@@ -9,17 +9,6 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(brackets line main pattern regexp root)
 SAVEHIST=1000
 source $ZSH/oh-my-zsh.sh
 
-if [[ "${terminfo[kcuu1]}" != "" ]]; then
-  autoload -U up-line-or-beginning-search
-  zle -N up-line-or-beginning-search
-  bindkey "${terminfo[kcuu1]}" up-line-or-beginning-search
-fi
-if [[ "${terminfo[kcud1]}" != "" ]]; then
-  autoload -U down-line-or-beginning-search
-  zle -N down-line-or-beginning-search
-  bindkey "${terminfo[kcud1]}" down-line-or-beginning-search
-fi
-
 pasteinit() {
   OLD_SELF_INSERT=${${(s.:.)widgets[self-insert]}[2,3]}
   zle -N self-insert url-quote-magic
@@ -29,9 +18,6 @@ pastefinish() {
 }
 zstyle :bracketed-paste-magic paste-init pasteinit
 zstyle :bracketed-paste-magic paste-finish pastefinish
-
-autoload -U compinit
-compinit
 
 export THREADS=8
 export MAKEFLAGS="-j$THREADS"
