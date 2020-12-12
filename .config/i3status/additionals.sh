@@ -64,10 +64,7 @@ update_load() {
 
   local util=$(printf "%02d%%" $(get_metric "$metrics" utilization_gpu))
   local temp=$(printf "%02d°C" $(get_metric "$metrics" temperature_gpu))
-
-  local used=$(get_metric "$metrics" memory_used)
-  local total=$(get_metric "$metrics" memory_total)
-  local usage=$(printf "%.1f%%" $(bc -l <<< "100 * $used / $total"))
+  local usage=$(printf "%02d%%" $(get_metric "$metrics" utilization_memory))
 
   load="  $util |  $temp |  $usage |"
 }
