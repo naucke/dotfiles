@@ -1,6 +1,6 @@
 URxvt.background: black
 URxvt.foreground: white
-URxvt.font: xft:IBM Plex Mono:pixelsize=13
+URxvt.font: xft:BlexMono Nerd Font Mono:pixelsize=13
 URxvt.scrollBar: false
 URxvt.transparent: true
 URxvt.shading: 30
