@@ -12,10 +12,12 @@ vmname=Windows
 boincdir="/var/lib/boinc"
 
 # USB Devices
+awk_get_addr='{printf "%d", $4}'
 usb_devices=$(lsusb)
 dac_line=$(fgrep "Texas Instruments PCM2902 Audio Codec" <<< $usb_devices)
 usb_bus=$(awk '{printf "%d", $2}' <<< $dac_line)
-dac=$(awk '{printf "%d", $4}' <<< $dac_line)
+dac=$(awk "$awk_get_addr" <<< $dac_line)
+headset=$(fgrep "GN Netcom Jabra EVOLVE LINK" <<< $usb_devices | awk "$awk_get_addr")
 
 # Avalanche Studios edge case
 echo 1 | sudo tee /sys/module/kvm/parameters/ignore_msrs > /dev/null
@@ -62,14 +64,19 @@ sudo qemu-system-x86_64 \
   -drive if=pflash,format=raw,file=/usr/share/edk2-ovmf/x64/OVMF_VARS.fd \
   -nographic \
   -vga none \
-  -object input-linux,id=kbd,evdev=/dev/input/by-path/platform-i8042-serio-0-event-kbd,grab_all=on,repeat=on \
-  -device virtio-keyboard-pci \
-  -object input-linux,id=mouse,evdev=$(compgen -G /dev/input/by-path/*-event-mouse) -device virtio-mouse-pci \
   -usb -device usb-host,hostbus=$usb_bus,hostaddr=$dac \
-  -netdev user,id=network0,hostfwd=tcp::9101-:9101 -device e1000,netdev=network0 \
+  $([ $headset ] && echo -usb -device usb-host,hostbus=$usb_bus,hostaddr=$headset) \
+  -device virtio-keyboard-pci \
+  -object input-linux,id=kbd,evdev=/dev/input/by-path/pci-0000:00:14.0-usb-0:5.2:1.0-event-kbd \
+  -device virtio-mouse-pci \
+  -object input-linux,id=mouse,evdev=/dev/input/by-path/pci-0000:00:14.0-usb-0:5.4:1.0-event-mouse \
+  -device e1000,netdev=network0 \
+  -netdev user,id=network0,hostfwd=tcp::9101-:9101 \
   -device virtio-scsi-pci,id=scsi \
-  -drive file=/root/Windows.qcow2,id=disk,format=qcow2,if=none,cache=writeback -device scsi-hd,drive=disk \
-  -drive file=/dev/sdb,id=hdd,format=raw,if=none -device scsi-hd,drive=hdd \
+  -device scsi-hd,drive=disk \
+  -drive file=/root/Windows.qcow2,id=disk,format=qcow2,if=none,cache=writeback \
+  -device scsi-hd,drive=hdd \
+  -drive file=/dev/sdb,id=hdd,format=raw,if=none \
   &
 
 # CD-ROM
