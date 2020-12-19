@@ -36,7 +36,9 @@ alias mv="mv --interactive"
 
 alias lock_screenon="i3lock --image ~/Desktop/Desktop.png"
 alias lock="lock_screenon && xset dpms force off"
-alias susp="lock_screenon && systemctl suspend"
+alias nosleep="xset s off"
+alias normalcaps="setxkbmap -option"
+alias swapcaps="setxkbmap -option caps:swapescape"
 alias config='git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 alias pkgcl='sudo pacman --remove --cascade --recursive $(pacman --query --deps --quiet --unrequired --unrequired)'
