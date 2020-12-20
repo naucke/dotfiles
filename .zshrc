@@ -36,11 +36,13 @@ alias mv="mv --interactive"
 
 alias lock_screenon="i3lock --image ~/Desktop/Desktop.png"
 alias lock="lock_screenon && xset dpms force off"
-alias nosleep="xset s off"
+
+alias nosleep="xset -dpms && xset s off"
+alias dosleep="xset s on"
 alias normalcaps="setxkbmap -option"
 alias swapcaps="setxkbmap -option caps:swapescape"
-alias config='git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
+alias config='git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias pkgcl='sudo pacman --remove --cascade --recursive $(pacman --query --deps --quiet --unrequired --unrequired)'
 
 alias boincsusp="sh -c 'cd /var/lib/boinc && boinccmd --set_run_mode never'"
