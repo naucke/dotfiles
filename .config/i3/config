@@ -74,6 +74,8 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 bar {
+        tray_output HDMI1
+        tray_output HDMI-1-1
         colors {
                 focused_workspace $accent $main #ffffff
         }
