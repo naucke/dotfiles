@@ -67,9 +67,9 @@ sudo qemu-system-x86_64 \
   -usb -device usb-host,hostbus=$usb_bus,hostaddr=$dac \
   $([ $headset ] && echo -usb -device usb-host,hostbus=$usb_bus,hostaddr=$headset) \
   -device virtio-keyboard-pci \
-  -object input-linux,id=kbd,evdev=/dev/input/by-path/pci-0000:00:14.0-usb-0:5.2:1.0-event-kbd \
+  -object input-linux,id=kbd,evdev=/dev/input/by-path/platform-i8042-serio-0-event-kbd,grab_all=on,repeat=on \
   -device virtio-mouse-pci \
-  -object input-linux,id=mouse,evdev=/dev/input/by-path/pci-0000:00:14.0-usb-0:5.4:1.0-event-mouse \
+  -object input-linux,id=mouse,evdev=$(compgen -G /dev/input/by-id/usb-Logitech_Gaming_Mouse_G402*-event-mouse) \
   -device e1000,netdev=network0 \
   -netdev user,id=network0,hostfwd=tcp::9101-:9101 \
   -device virtio-scsi-pci,id=scsi \
