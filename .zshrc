@@ -39,7 +39,7 @@ alias lock="lock_screenon && xset dpms force off"
 
 alias nosleep="xset -dpms && xset s off"
 alias dosleep="xset s on"
-alias normalcaps="setxkbmap -option"
+alias normalcaps="setxkbmap -option && setxkbmap de"
 alias swapcaps="setxkbmap -option caps:swapescape"
 
 alias config='git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
