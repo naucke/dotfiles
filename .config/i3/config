@@ -85,5 +85,5 @@ bar {
 }
 
 workspace 1 output HDMI2
-bindsym Print exec flameshot gui
+bindsym Print exec org.flameshot.Flameshot gui
 client.focused $main $main #ffffff $accent $accent
