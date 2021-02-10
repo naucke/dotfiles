@@ -2,14 +2,13 @@
 set -e
 
 ### Important reminder!
-# Very frequent hickups occur when an optical disc drive is passed without a disc inserted.
+# Very frequent hiccups occur when an optical disc drive is passed without a disc inserted.
 # Only pass one when there is a disc inserted.
 
 cores=3
 threads=2
 memory=12288
 vmname=Windows
-boincdir="/var/lib/boinc"
 
 # USB Devices
 awk_get_addr='{printf "%d", $4}'
@@ -24,16 +23,6 @@ echo 1 | sudo tee /sys/module/kvm/parameters/ignore_msrs > /dev/null
 
 # Bind GPU
 sudo vfio-bind 0000:01:00.0 0000:01:00.1 0000:02:00.0
-
-# Check if BOINC is running
-boinc_was_running=0
-(cd $boincdir && boinccmd --get_cc_status | fgrep "user request" > /dev/null) || boinc_was_running=1
-
-# Suspend BOINC if applicable
-if [ $boinc_was_running -eq 1 ]
-then
-  (cd $boincdir && boinccmd --set_run_mode never)
-fi
 
 # Unmount encrypted drive for VM
 sudo systemctl stop mnt-vera1.automount
@@ -99,9 +88,3 @@ feh --bg-tile ~/Desktop/Desktop.png
 # Re-mount encrypted drive
 sudo systemctl start systemd-cryptsetup@vera1
 sudo systemctl start mnt-vera1.automount
-
-# Resume BOINC if it was running
-if [ $boinc_was_running == 1 ]
-then
-  (cd $boincdir && boinccmd --set_run_mode auto)
-fi
