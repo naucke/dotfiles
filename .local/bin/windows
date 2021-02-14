@@ -13,7 +13,7 @@ vmname=Windows
 # USB Devices
 awk_get_addr='{printf "%d", $4}'
 usb_devices=$(lsusb)
-dac_line=$(fgrep "Texas Instruments PCM2902 Audio Codec" <<< $usb_devices)
+dac_line=$(fgrep "Texas Instruments PCM2902 Audio Codec" <<< $usb_devices || echo "Failed to find DAC device")
 usb_bus=$(awk '{printf "%d", $2}' <<< $dac_line)
 dac=$(awk "$awk_get_addr" <<< $dac_line)
 headset=$(fgrep "GN Netcom Jabra EVOLVE LINK" <<< $usb_devices | awk "$awk_get_addr")
