@@ -81,7 +81,7 @@ bar {
         }
         position top
         font pango:IBM Plex Mono, Font Awesome 5 Free Solid 10
-        status_command exec ~/.config/i3status/additionals.sh
+        status_command exec ~/.config/i3status/additionals
 }
 
 workspace 1 output HDMI2
