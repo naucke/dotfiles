@@ -16,6 +16,7 @@ import (
 const (
 	netStatisticsSrc = "/sys/class/net/wlp0s20u1/statistics/"
 	gpuTempSrc       = "http://127.0.0.1:9101/metrics/"
+	gpuTempTimeout   = 500 * time.Millisecond
 )
 
 var (
@@ -91,7 +92,10 @@ func getMetrics(fullMetrics string, soughtMetrics ...string) ([]int, error) {
 }
 
 func getLoad() (string, error) {
-	resp, err := http.Get(gpuTempSrc)
+	client := &http.Client{
+		Timeout: gpuTempTimeout,
+	}
+	resp, err := client.Get(gpuTempSrc)
 	if err != nil {
 		// not available, ignore
 		return "", nil
