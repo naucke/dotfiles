@@ -3,7 +3,6 @@ export PATH="$HOME/.local/bin:$PATH"
 export ZSH="/home/jakob/.oh-my-zsh"
 ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
-DISABLE_UNTRACKED_FILES_DIRTY="true"
 plugins=(last-working-dir zsh-autosuggestions zsh-syntax-highlighting)
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(brackets line main pattern regexp root)
 SAVEHIST=1000
