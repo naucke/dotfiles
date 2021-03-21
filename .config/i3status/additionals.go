@@ -33,7 +33,8 @@ func readableRate(bytes int, interval time.Duration) string {
 	} else if kib > 1024 {
 		mibInt := kib >> 10
 		mibDec := kib % 1024 * 976 / 1000
-		return fmt.Sprintf("%d.%02dM", mibInt, mibDec)
+		// mibDec is 10^3 behind, truncate to 2 digits
+		return fmt.Sprintf("%d.%.2sM", mibInt, fmt.Sprintf("%.3d", mibDec))
 	} else {
 		return fmt.Sprintf("%dK", kib)
 	}
