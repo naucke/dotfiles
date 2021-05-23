@@ -1,4 +1,4 @@
-export PATH="$HOME/.local/bin:$PATH"
+export PATH="$PATH:$HOME/.local/bin"
 
 export ZSH="/home/jakob/.oh-my-zsh"
 ENABLE_CORRECTION="true"
