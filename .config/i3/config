@@ -80,7 +80,7 @@ bar {
                 focused_workspace $accent $main #ffffff
         }
         position top
-        font pango:IBM Plex Mono, Font Awesome 5 Free Solid 10
+        font pango:IBM Plex Mono, Font Awesome 5 Free Solid 9.5
         status_command exec ~/.config/i3status/additionals
 }
 
