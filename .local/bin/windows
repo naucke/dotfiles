@@ -25,8 +25,8 @@ echo 1 | sudo tee /sys/module/kvm/parameters/ignore_msrs > /dev/null
 sudo vfio-bind 0000:01:00.0 0000:01:00.1 0000:02:00.0
 
 # Unmount encrypted drive for VM
-sudo systemctl stop mnt-vera1.automount
-sudo systemctl stop systemd-cryptsetup@vera1
+sudo systemctl stop mnt-{luks,vera1}.automount
+sudo systemctl stop systemd-cryptsetup@{luks,vera1}
 
 # Turn primary monitor off and let autoinput do its thing
 xrandr --output HDMI2 --off
@@ -86,5 +86,5 @@ source /etc/X11/xrandr
 feh --bg-tile ~/Desktop/Desktop.png
 
 # Re-mount encrypted drive
-sudo systemctl start systemd-cryptsetup@vera1
-sudo systemctl start mnt-vera1.automount
+sudo systemctl start systemd-cryptsetup@{luks,vera1}
+sudo systemctl start mnt-{luks,vera1}.automount

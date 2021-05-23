@@ -7,6 +7,7 @@ order += "cpu_usage"
 order += "cpu_temperature 0"
 order += "memory"
 order += "disk /"
+order += "disk /mnt/luks"
 order += "disk /mnt/vera1"
 order += "tztime date"
 order += "tztime time"
@@ -26,6 +27,10 @@ memory {
 
 disk / {
         format = " %percentage_used"
+}
+
+disk /mnt/luks {
+        format = " %percentage_used"
 }
 
 disk /mnt/vera1 {
