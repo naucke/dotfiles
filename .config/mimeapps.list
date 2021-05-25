@@ -1,0 +1,23 @@
+[Default Applications]
+application/octet-stream=vim.desktop
+application/pdf=org.gnome.Evince.desktop
+audio/flac=mpv.desktop
+audio/mpegapplication/octet-stream=mpv.desktop
+audio/x-aiff=mpv.desktop
+audio/x-wav=mpv.desktop
+image/gif=mpv.desktop
+image/jpeg=feh.desktop;
+image/png=feh.desktop
+image/tiff=feh.desktop
+image/webp=feh.desktop
+image/x-ms-bmp=feh.desktop
+text/csv=vim.desktop
+text/html=org.mozilla.firefox.desktop
+text/plain=vim.desktop
+text/vcard=vim.desktop
+text/x-c++=vim.desktop
+text/x-c=vim.desktop
+text/x-perl=vim.desktop
+text/x-ruby=vim.desktop
+text/x-script.python=vim.desktop
+text/x-tex=vim.desktop
