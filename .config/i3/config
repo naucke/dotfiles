@@ -87,3 +87,8 @@ bar {
 workspace 1 output HDMI2
 bindsym Print exec org.flameshot.Flameshot gui
 client.focused $main $main #ffffff $accent $accent
+
+exec --no-startup-id ~/.local/bin/ncmpcpp_coverd
+exec --no-startup-id ~/.fehbg
+exec --no-startup-id redshift
+exec --no-startup-id joystickwake
