@@ -21,3 +21,4 @@ text/x-perl=vim.desktop
 text/x-ruby=vim.desktop
 text/x-script.python=vim.desktop
 text/x-tex=vim.desktop
+inode/directory=pcmanfm.desktop
