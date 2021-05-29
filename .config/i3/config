@@ -1,12 +1,12 @@
-set $main "#365214"
-set $accent "#498205"
+set $main "#101010"
+set $accent "#f0f0f0"
 
 set $mod Mod1
 font pango:IBM Plex Mono 10
 floating_modifier $mod
 bindsym $mod+Return exec urxvt
 bindsym $mod+Shift+q kill
-bindsym $mod+q exec dmenu_run -fn "IBM Plex Mono" -sb $accent -i
+bindsym $mod+q exec dmenu_run -fn "IBM Plex Mono" -sb "#d000c0" -i
 
 bindsym $mod+j focus left
 bindsym $mod+k focus down

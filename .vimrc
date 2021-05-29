@@ -5,7 +5,7 @@ Plugin 'tmsvg/pear-tree'
 Plugin 'itchyny/lightline.vim'
 call vundle#end()
 
-let g:lightline = {'colorscheme': 'solarized'}
+let g:lightline = {'colorscheme': 'seoul256'}
 filetype plugin indent on
 syntax on
 
