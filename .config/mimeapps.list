@@ -1,4 +1,5 @@
 [Default Applications]
+application/json=vim.desktop
 application/octet-stream=vim.desktop
 application/pdf=org.gnome.Evince.desktop
 audio/flac=mpv.desktop
@@ -22,4 +23,3 @@ text/x-ruby=vim.desktop
 text/x-script.python=vim.desktop
 text/x-tex=vim.desktop
 inode/directory=pcmanfm.desktop
-application/json=vim.desktop
