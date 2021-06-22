@@ -6,7 +6,62 @@
         "equalizer": {
             "state": "true",
             "num-bands": "10",
+            "split-channels": "false",
             "left": {
+                "band0": {
+                    "type": "Lo-shelf",
+                    "gain": "4",
+                    "frequency": "30",
+                    "q": "0.71"
+                },
+                "band1": {
+                    "type": "Lo-shelf",
+                    "gain": "5.5",
+                    "frequency": "110",
+                    "q": "0.71"
+                },
+                "band2": {
+                    "gain": "-1.5",
+                    "frequency": "190",
+                    "q": "0.6"
+                },
+                "band3": {
+                    "gain": "1.2",
+                    "frequency": "800",
+                    "q": "0.6"
+                },
+                "band4": {
+                    "gain": "-3.5",
+                    "frequency": "1900",
+                    "q": "2"
+                },
+                "band5": {
+                    "gain": "-1.2",
+                    "frequency": "2430",
+                    "q": "7"
+                },
+                "band6": {
+                    "gain": "-2.4",
+                    "frequency": "2875",
+                    "q": "3.5"
+                },
+                "band7": {
+                    "gain": "-2.7",
+                    "frequency": "6000",
+                    "q": "4"
+                },
+                "band8": {
+                    "gain": "-1.6",
+                    "frequency": "7300",
+                    "q": "6"
+                },
+                "band9": {
+                    "gain": "-1.8",
+                    "frequency": "8000",
+                    "q": "6"
+                }
+            },
+            "right": {
                 "band0": {
                     "type": "Lo-shelf",
                     "gain": "4",
