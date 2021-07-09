@@ -43,6 +43,7 @@ alias normalcaps="setxkbmap -option && setxkbmap de"
 alias swapcaps="setxkbmap -option caps:swapescape"
 
 alias config='git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias run_gh_actions='grep run: .github/**/*yml | cut -d: -f2 | sh -e'
 alias pkgcl='sudo pacman --remove --cascade --recursive $(pacman --query --deps --quiet --unrequired --unrequired)'
 
 alias boincsusp="sh -c 'cd /var/lib/boinc && boinccmd --set_run_mode never'"
