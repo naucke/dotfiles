@@ -73,8 +73,8 @@ sudo qemu-system-x86_64 \
 #  -cdrom /dev/cdrom \
 
 # CPU affinity pinning
-sleep 10 # dirtily wait for VM processes to spin up
-sudo qemu-cpupin $vmname $(($cores * $threads)) 0 > /dev/null
+sleep 5 # dirtily wait for VM processes to spin up
+sudo qemu-cpupin $vmname $(($cores * $threads)) 1 > /dev/null
 
 # Wait for QEMU to end
 wait
