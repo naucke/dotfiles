@@ -13,10 +13,10 @@ vmname=Windows
 # USB Devices
 awk_get_addr='{printf "%d", $4}'
 usb_devices=$(lsusb)
-dac_line=$(fgrep "Texas Instruments PCM2902 Audio Codec" <<< $usb_devices || echo "Failed to find DAC device")
+dac_line=$(grep -F "Thesycon Systemsoftware & Consulting GmbH E30" <<< $usb_devices || echo "Failed to find DAC device")
 usb_bus=$(awk '{printf "%d", $2}' <<< $dac_line)
 dac=$(awk "$awk_get_addr" <<< $dac_line)
-headset=$(fgrep "GN Netcom Jabra EVOLVE LINK" <<< $usb_devices | awk "$awk_get_addr")
+headset=$(grep -F "GN Netcom Jabra EVOLVE LINK" <<< $usb_devices | awk "$awk_get_addr")
 
 # Avalanche Studios edge case
 echo 1 | sudo tee /sys/module/kvm/parameters/ignore_msrs > /dev/null
@@ -53,8 +53,9 @@ sudo qemu-system-x86_64 \
   -drive if=pflash,format=raw,file=/usr/share/edk2-ovmf/x64/OVMF_VARS.fd \
   -nographic \
   -vga none \
-  -usb -device usb-host,hostbus=$usb_bus,hostaddr=$dac \
-  $([ $headset ] && echo -usb -device usb-host,hostbus=$usb_bus,hostaddr=$headset) \
+  -device qemu-xhci,id=xhci \
+  -device usb-host,bus=xhci.0,hostbus=$usb_bus,hostaddr=$dac \
+  $([ $headset ] && echo -device usb-host,bus=xhci.0,hostbus=$usb_bus,hostaddr=$headset) \
   -device virtio-keyboard-pci \
   -object input-linux,id=kbd,evdev=/dev/input/by-path/platform-i8042-serio-0-event-kbd,grab_all=on,repeat=on \
   -device virtio-mouse-pci \
