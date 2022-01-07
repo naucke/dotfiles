@@ -10,23 +10,19 @@ URxvt.perl-ext-common: default,matcher,resize-font,selection-to-clipboard
 URxvt.matcher.button: 1
 URxvt.url-launcher: org.mozilla.firefox
 
-# derived from
-# Cyberpunk Neon: https://github.com/Roboron3042/Cyberpunk-Neon
-# Author: Roberto Michán Sánchez (Roboron)
-# License: CC-BY-SA-4.0
-URxvt.color0:  #123e7c
-URxvt.color1:  #ff0000
-URxvt.color2:  #d300c4
-URxvt.color3:  #f57800
-URxvt.color4:  #1060f0
-URxvt.color5:  #9000e0
-URxvt.color6:  #0abdc6
-URxvt.color7:  #d7d7d5
-URxvt.color8:  #1c61c2
-URxvt.color9:  #ff0000
-URxvt.color10: #d300c4
-URxvt.color11: #ff5780
-URxvt.color12: #00ff00
-URxvt.color13: #711c91
-URxvt.color14: #0abdc6
-URxvt.color15: #d7d7d5
+URxvt.color0: #0a0f14
+URxvt.color1: #c33027
+URxvt.color2: #26a98b
+URxvt.color3: #edb54b
+URxvt.color4: #5994a5
+URxvt.color5: #8e91a5
+URxvt.color6: #33859d
+URxvt.color7: #98d1ce
+URxvt.color8: #7a7f84
+URxvt.color9: #d26939
+URxvt.color10: #087f2d
+URxvt.color11: #245361
+URxvt.color12: #4977b8
+URxvt.color13: #888ba5
+URxvt.color14: #599caa
+URxvt.color15: #d3ebe9

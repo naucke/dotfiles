@@ -1,6 +1,11 @@
 MIT License
 
-Copyright (c) 2018 Jakob Naucke
+Copyright (c) 2018-2022 Jakob Naucke
+
+Color schemes derived from
+https://github.com/eendroroy/alacritty-theme/blob/master/themes/gotham.yaml,
+Indrajit Roy 2019, Apache 2.0, which is in turn derived from
+https://github.com/whatyouhide/vim-gotham, Andrea Leopardi 2014, MIT License
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

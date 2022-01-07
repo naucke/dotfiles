@@ -21,7 +21,7 @@ zstyle :bracketed-paste-magic paste-finish pastefinish
 export EDITOR=vim
 export THREADS=8
 export MAKEFLAGS="-j$THREADS"
-PS1="%F{red}%(?..%? )%F{green}%B%K{green}█▓▒░%F{white}%K{green}%n@%m%F{green}%K{txtrst}█▓▒░ %F{green}%B%~ %% "
+PS1="%F{cyan}%(?..%? )%F{cyan}%B░▒▓█%F{white}%K{cyan}%n@%m%F{cyan}%K{txtrst}█▓▒░ %F{cyan}%B%~ %% "
 
 alias j="joplin"
 alias l="ls -l --human-readable --all"
