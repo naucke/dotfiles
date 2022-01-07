@@ -115,7 +115,7 @@ func getLoad() (string, error) {
 	gpuUtil := metrics[0]
 	gpuTemp := metrics[1]
 	memory := metrics[2]
-	return fmt.Sprintf("  %02d%% |  %02d°C |  %02d%% |", gpuUtil, gpuTemp, memory), nil
+	return fmt.Sprintf("  %02d%% |  %02d°C |  %02d%% |", gpuUtil, gpuTemp, memory), nil
 }
 
 func main() {

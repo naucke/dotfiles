@@ -33,9 +33,6 @@ alias v="vim"
 alias cp="cp --interactive"
 alias mv="mv --interactive"
 
-alias lock_screenon="i3lock --image ~/Desktop/Desktop.png"
-alias lock="lock_screenon && xset dpms force off"
-
 alias nosleep="xset -dpms && xset s off"
 alias dosleep="xset s on"
 alias normalcaps="setxkbmap -option && setxkbmap de"
