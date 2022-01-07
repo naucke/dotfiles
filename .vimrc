@@ -6,6 +6,7 @@ call vundle#end()
 
 let g:lightline = {'colorscheme': 'seoul256'}
 filetype plugin indent on
+hi Visual cterm=none ctermbg=darkgrey
 syntax on
 
 set expandtab
