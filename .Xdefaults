@@ -12,9 +12,9 @@ URxvt.url-launcher: org.mozilla.firefox
 
 URxvt.color0: #0a0f14
 URxvt.color1: #c33027
-URxvt.color2: #26a98b
+URxvt.color2: #06896b
 URxvt.color3: #edb54b
-URxvt.color4: #5994a5
+URxvt.color4: #79b4c5
 URxvt.color5: #8e91a5
 URxvt.color6: #33859d
 URxvt.color7: #98d1ce
