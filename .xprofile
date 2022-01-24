@@ -7,3 +7,4 @@ xset -b
 
 source /etc/X11/xrandr
 export QT_QPA_PLATFORMTHEME=qt5ct
+export MANGOHUD_CONFIG=cpu_temp,ram,gpu_temp,gpu_core_clock,vram,position=top-right
