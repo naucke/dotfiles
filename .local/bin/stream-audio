@@ -1,0 +1,6 @@
+#!/bin/bash
+pactl load-module module-null-sink sink_name=VoicechatListensHere
+pactl load-module module-null-sink sink_name=ApplicationsGoHere
+pactl load-module module-loopback source=alsa_input.usb-Audio_Technica_Corp_ATR2100x-USB_Microphone-00.analog-stereo sink=VoicechatListensHere
+pactl load-module module-loopback source=ApplicationsGoHere sink=VoicechatListensHere
+pactl load-module module-loopback source=ApplicationsGoHere sink=alsa_output.usb-Topping_E30-00.analog-stereo
