@@ -1,0 +1,4 @@
+def_key "ä"
+  next
+def_key "ö"
+  previous

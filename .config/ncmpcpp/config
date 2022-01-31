@@ -1,4 +1,5 @@
 lyrics_directory = /tmp/ncmpcpp_lyrics
+ncmpcpp_directory = ~/.config/ncmpcpp
 mpd_host = ~/.config/mpd/socket
 mpd_port = 6600
 mpd_music_dir = /mnt/vera1/Music

@@ -6,6 +6,6 @@ mkfifo $pipe
 while read _ < $pipe
 do
   pkill $last_pid 2> /dev/null
-  ~/.local/bin/update_cover ~/.ncmpcpp/config ~/.config/boundaries.conf &
+  ~/.local/bin/update_cover ~/.config/ncmpcpp/config ~/.config/boundaries.conf &
   last_pid=$!
 done

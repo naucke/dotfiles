@@ -1,3 +1,4 @@
+set viminfofile=$XDG_STATE_HOME/vim/viminfo
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
