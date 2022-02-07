@@ -74,8 +74,8 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 bar {
-	tray_output HDMI1
-	tray_output HDMI-1-1
+	tray_output HDMI2
+	tray_output HDMI-1-2
 	colors {
 		focused_workspace $bright-white $blue
 	}
@@ -84,7 +84,7 @@ bar {
 	status_command exec ~/.config/i3status/additionals
 }
 
-workspace 1 output HDMI2
+workspace 1 output HDMI3
 bindsym Print exec org.flameshot.Flameshot gui
 client.focused #093748 $blue $bright-white
 

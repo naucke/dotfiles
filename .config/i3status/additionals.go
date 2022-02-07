@@ -14,7 +14,7 @@ import (
 )
 
 const (
-	netStatisticsSrc = "/sys/class/net/wlp0s20u1/statistics/"
+	netStatisticsSrc = "/sys/class/net/wlp0s20f0u2/statistics/"
 	gpuTempSrc       = "http://127.0.0.1:9101/metrics/"
 	gpuTempTimeout   = 500 * time.Millisecond
 )
