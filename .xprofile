@@ -6,6 +6,6 @@ xset m 0 0
 xset -b
 
 source /etc/X11/xrandr
-export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/gtkrc"
+export GTK2_RC_FILES=~/.config/gtk-2.0/gtkrc
 export QT_QPA_PLATFORMTHEME=qt5ct
 export MANGOHUD_CONFIG=cpu_temp,ram,gpu_temp,gpu_core_clock,vram,position=top-right
