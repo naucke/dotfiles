@@ -10,6 +10,12 @@
 (savehist-mode)
 (show-paren-mode)
 
+; Settings
+(setq display-line-numbers 'relative
+      mouse-yank-at-point t
+      scroll-margin 4
+      scroll-step 1)
+
 ; Graphical mode fixes (does not apply to emacs-nox)
 (blink-cursor-mode -1)
 (menu-bar-mode -1)
@@ -34,10 +40,6 @@
 
 ; Avoid i3/Sway clash
 (global-set-key (kbd "M-c") 'shell-command)
-
-; Scrolling
-(setq scroll-step 1
-      scroll-margin 4)
 
 ; AucTeX
 (pdf-loader-install)
