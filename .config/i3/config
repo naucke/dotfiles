@@ -6,6 +6,7 @@ font pango:IBM Plex Sans 10
 floating_modifier $mod
 bindsym $mod+Return exec urxvt
 bindsym $mod+Shift+q kill
+# No Emacs clash
 bindsym $mod+q exec dmenu_run -i -fn "IBM Plex Sans" -nf "#98d1ce" -nb "#0a0f14" -sf $bright-white -sb $blue
 
 bindsym $mod+h focus left

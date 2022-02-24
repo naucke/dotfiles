@@ -1,10 +1,12 @@
-export ZSH="/home/jakob/.oh-my-zsh"
+# Oh My Zsh
+export ZSH="$HOME/.oh-my-zsh"
 ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
 plugins=(last-working-dir vi-mode zsh-autosuggestions zsh-syntax-highlighting)
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(brackets line main pattern regexp root)
-source $ZSH/oh-my-zsh.sh
+source "$ZSH/oh-my-zsh.sh"
 
+# Fixing pasting
 pasteinit() {
 	OLD_SELF_INSERT=${${(s.:.)widgets[self-insert]}[2,3]}
 	zle -N self-insert url-quote-magic
@@ -15,12 +17,15 @@ pastefinish() {
 zstyle :bracketed-paste-magic paste-init pasteinit
 zstyle :bracketed-paste-magic paste-finish pastefinish
 
-export PATH="$PATH:$HOME/.local/bin"
+# General variables
+export GOPATH="$HOME/Documents/go"
+export PATH="$PATH:$GOPATH/bin:$HOME/.local/bin"
 export EDITOR=vim
 export THREADS=8
 export MAKEFLAGS="-j$THREADS"
 PS1="%F{cyan}%(?..%? )%F{cyan}%B░▒▓█%F{white}%K{cyan}%n@%m%F{cyan}%K{txtrst}█▓▒░ %F{cyan}%B%~ %% "
 
+# Directories
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
@@ -39,6 +44,7 @@ export RXVT_SOCKET="$XDG_RUNTIME_DIR/urxvtd"
 export TEXMFVAR="$XDG_CACHE_HOME/texlive/texmf-var"
 export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority"
 
+# Short aliases
 alias j="joplin"
 alias l="ls -l --human-readable --all"
 alias m="mutt"
