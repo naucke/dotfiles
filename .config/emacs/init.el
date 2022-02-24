@@ -1,52 +1,47 @@
+; Packages
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
-(package-initialize)
+(custom-set-variables '(package-selected-packages '(auctex evil go-mode lsp-mode magit pdf-tools rust-mode)))
 
-(require 'auto-complete)
-(require 'elpy)
-(require 'evil)
-(require 'magit)
-(require 'package)
+; Modes
+(column-number-mode)
+(evil-mode)
+(global-display-line-numbers-mode)
+(global-visual-line-mode)
+(savehist-mode)
+(show-paren-mode)
 
+; Graphical mode fixes (does not apply to emacs-nox)
+(blink-cursor-mode -1)
 (menu-bar-mode -1)
 (toggle-scroll-bar -1)
 (tool-bar-mode -1)
 
+; Styling (dto. emacs-nox)
+(add-to-list 'default-frame-alist '(font . "IBM Plex Mono-10"))
 (load-theme 'wombat)
 (set-cursor-color "#ffffff")
-(add-to-list 'default-frame-alist '(font . "IBM Plex Mono-10"))
 
-(global-display-line-numbers-mode)
-(setq column-number-mode t)
-(setq show-paren-delay 0)
-(show-paren-mode 1)
+; Evil exclusions
+(evil-set-initial-state 'compilation-mode 'emacs)
+(evil-set-initial-state 'image-mode 'emacs)
+(evil-set-initial-state 'image-dired-thumbnail-mode 'emacs)
+(evil-set-initial-state 'info-mode 'emacs)
 
-(global-set-key (kbd "M-y") 'shell-command)
+; LSP launchers
+(add-hook 'go-mode-hook 'lsp-deferred)
+(add-hook 'rust-mode-hook 'lsp-deferred)
+(add-hook 'python-mode-hook 'lsp-deferred)
 
-(evil-mode 1)
-(elpy-enable)
-(global-set-key (kbd "C-x g") 'magit-status)
+; Avoid i3/Sway clash
+(global-set-key (kbd "M-c") 'shell-command)
 
-(ac-config-default)
-(setq-default TeX-engine 'xetex)
-(setq-default TeX-PDF-mode t)
+; Scrolling
+(setq scroll-step 1
+      scroll-margin 4)
 
-(with-eval-after-load "tex"
-  (add-to-list 'TeX-view-program-list '("org.gnome.Evince" "org.gnome.Evince %o"))
-  (setcdr (assq 'output-pdf TeX-view-program-selection) '("org.gnome.Evince")))
-
-(with-eval-after-load "tex"
-  (add-hook 'LaTeX-mode-hook 'TeX-source-correlate-mode)
-  (add-to-list 'TeX-view-program-list '("org.gnome.Evince" ("org.gnome.Evince" " %o" (mode-io-correlate " %(outpage)"))))
-  (setcdr (assq 'output-pdf TeX-view-program-selection) '("org.gnome.Evince")))
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages '(magit evil elpy)))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
+; AucTeX
+(pdf-loader-install)
+(setq TeX-view-program-selection '((output-pdf "PDF Tools")))
+(add-hook 'TeX-after-compilation-finished-functions 'TeX-revert-document-buffer)
+(add-hook 'LaTeX-mode-hook (lambda () (push '("latexmk" "latexmk -pdf" TeX-run-TeX nil t) TeX-command-list)))
+(add-hook 'TeX-mode-hook '(lambda () (setq TeX-command-default "latexmk")))
