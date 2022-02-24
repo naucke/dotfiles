@@ -38,6 +38,10 @@
 (add-hook 'rust-mode-hook 'lsp-deferred)
 (add-hook 'python-mode-hook 'lsp-deferred)
 
+; No tabs
+(defun disable-tabs () (setq indent-tabs-mode nil))
+(add-hook 'rust-mode-hook 'disable-tabs)
+
 ; Avoid i3/Sway clash
 (global-set-key (kbd "M-c") 'shell-command)
 
