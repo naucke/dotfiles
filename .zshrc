@@ -52,14 +52,17 @@ alias n="ncmpcpp"
 alias r="ranger"
 alias v="vim"
 
+# Safety aliases
 alias cp="cp --interactive"
 alias mv="mv --interactive"
 
+# Swapping aliases
 alias nosleep="xset -dpms && xset s off"
 alias dosleep="xset s on"
 alias normalcaps="setxkbmap -option && setxkbmap de"
 alias swapcaps="setxkbmap -option caps:swapescape"
 
+# Convenience aliases
 alias config='git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias run_gha='grep run: .github/**/*yml | cut -d: -f2 | sh -e'
 alias pkgcl='pacman --remove --cascade --recursive $(pacman --query --deps --quiet --unrequired --unrequired)'
