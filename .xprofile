@@ -3,7 +3,6 @@ setxkbmap -option caps:swapescape
 numlockx on
 xmodmap ~/.config/Xmodmap
 xset m 0 0
-xset -b
 
 source /etc/X11/xrandr
 eval $(grep ^export ~/.zshrc)
