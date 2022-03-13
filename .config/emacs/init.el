@@ -33,6 +33,7 @@
 (evil-set-initial-state 'image-mode 'emacs)
 (evil-set-initial-state 'image-dired-thumbnail-mode 'emacs)
 (evil-set-initial-state 'info-mode 'emacs)
+(evil-set-initial-state 'xref-mode 'emacs)
 
 ; LSP launchers
 (add-hook 'go-mode-hook 'lsp-deferred)
