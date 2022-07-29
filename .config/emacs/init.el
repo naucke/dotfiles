@@ -1,6 +1,11 @@
 ; Packages
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
-(custom-set-variables '(package-selected-packages '(auctex evil go-mode lsp-mode magit pdf-tools rust-mode)))
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages '(auctex evil go-mode lsp-mode magit pdf-tools rust-mode)))
 
 ; Modes
 (column-number-mode)
@@ -51,5 +56,11 @@
 (pdf-loader-install)
 (setq TeX-view-program-selection '((output-pdf "PDF Tools")))
 (add-hook 'TeX-after-compilation-finished-functions 'TeX-revert-document-buffer)
-(add-hook 'LaTeX-mode-hook (lambda () (push '("latexmk" "latexmk -pdf" TeX-run-TeX nil t) TeX-command-list)))
-(add-hook 'TeX-mode-hook '(lambda () (setq TeX-command-default "latexmk")))
+(add-hook 'TeX-mode-hook (lambda () (push '("latexmk" "latexmk -pdf" TeX-run-TeX nil t) TeX-command-list)))
+(add-hook 'TeX-mode-hook (lambda () (setq TeX-command-default "latexmk")))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
