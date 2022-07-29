@@ -47,7 +47,6 @@ export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority"
 # Short aliases
 alias j="joplin"
 alias l="ls -l --human-readable --all"
-alias m="mutt"
 alias n="ncmpcpp"
 alias r="ranger"
 alias v="vim"
