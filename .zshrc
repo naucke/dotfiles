@@ -1,7 +1,8 @@
 # Oh My Zsh
 export ZSH="$HOME/.oh-my-zsh"
-ENABLE_CORRECTION="true"
-COMPLETION_WAITING_DOTS="true"
+DISABLE_AUTO_UPDATE=true
+ENABLE_CORRECTION=true
+COMPLETION_WAITING_DOTS=true
 plugins=(last-working-dir vi-mode zsh-autosuggestions zsh-syntax-highlighting)
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(brackets line main pattern regexp root)
 source "$ZSH/oh-my-zsh.sh"
