@@ -69,7 +69,4 @@ alias config='git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias run_gha='grep run: .github/**/*yml | cut -d: -f2 | sh -e'
 alias pkgcl='pacman --remove --cascade --recursive $(pacman --query --deps --quiet --unrequired --unrequired)'
 
-alias boincsusp="sh -c 'cd /var/lib/boinc && boinccmd --set_run_mode never'"
-alias boincres="sh -c 'cd /var/lib/boinc && boinccmd --set_run_mode auto'"
-
 neofetch
