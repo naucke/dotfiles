@@ -49,9 +49,6 @@
 (defun disable-tabs () (setq indent-tabs-mode nil))
 (add-hook 'rust-mode-hook 'disable-tabs)
 
-; Avoid i3/Sway clash
-(global-set-key (kbd "M-c") 'shell-command)
-
 ; AucTeX
 (pdf-loader-install)
 (setq TeX-view-program-selection '((output-pdf "PDF Tools")))
