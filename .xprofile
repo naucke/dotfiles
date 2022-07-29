@@ -10,4 +10,4 @@ export XDG_DATA_HOME="$HOME/.local/share"
 eval $(grep ^export ~/.zshrc)
 export GTK2_RC_FILES=~/.config/gtk-2.0/gtkrc
 export QT_QPA_PLATFORMTHEME=qt5ct
-export MANGOHUD_CONFIG=cpu_temp,ram,gpu_temp,gpu_core_clock,vram,position=top-right
+export MANGOHUD_CONFIG=cpu_temp,ram,gpu_temp,gpu_core_clock,vram,position=top-left
