@@ -43,6 +43,7 @@
 (evil-set-initial-state 'xref-mode 'emacs)
 
 ; LSP launchers
+(add-hook 'c-mode-hook 'lsp)
 (add-hook 'go-mode-hook 'lsp-deferred)
 (add-hook 'rust-mode-hook 'lsp-deferred)
 (add-hook 'python-mode-hook 'lsp-deferred)
