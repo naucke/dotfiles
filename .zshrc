@@ -5,6 +5,7 @@ ENABLE_CORRECTION=true
 COMPLETION_WAITING_DOTS=true
 plugins=(last-working-dir vi-mode zsh-autosuggestions zsh-syntax-highlighting)
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(brackets line main pattern regexp root)
+ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
 source "$ZSH/oh-my-zsh.sh"
 
 # Fixing pasting
