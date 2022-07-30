@@ -53,11 +53,12 @@
 (add-hook 'rust-mode-hook 'disable-tabs)
 
 ; AucTeX
-(pdf-loader-install)
+(pdf-tools-install)
 (setq TeX-view-program-selection '((output-pdf "PDF Tools")))
 (add-hook 'TeX-after-compilation-finished-functions 'TeX-revert-document-buffer)
-(add-hook 'TeX-mode-hook (lambda () (push '("latexmk" "latexmk -pdf" TeX-run-TeX nil t) TeX-command-list)))
+(add-hook 'LaTeX-mode-hook (lambda () (push '("latexmk" "latexmk" TeX-run-TeX nil t) TeX-command-list)))
 (add-hook 'TeX-mode-hook (lambda () (setq TeX-command-default "latexmk")))
+
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
