@@ -22,11 +22,11 @@
       display-line-numbers-type 'relative
       mouse-yank-at-point t
       scroll-margin 4
-      scroll-step 1)
+      scroll-step 1
+      visible-bell t)
 
 ; Graphical mode fixes (does not apply to emacs-nox)
 (blink-cursor-mode -1)
-(menu-bar-mode -1)
 (toggle-scroll-bar -1)
 (tool-bar-mode -1)
 
