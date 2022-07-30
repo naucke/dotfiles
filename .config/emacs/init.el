@@ -5,12 +5,14 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages '(auctex evil go-mode lsp-mode magit pdf-tools rust-mode)))
+ '(package-selected-packages
+   '(auctex evil go-mode flycheck lsp-mode magit pdf-tools rust-mode)))
 
 ; Modes
 (column-number-mode)
 (evil-mode)
 (global-display-line-numbers-mode)
+(global-flycheck-mode)
 (global-visual-line-mode)
 (savehist-mode)
 (show-paren-mode)
