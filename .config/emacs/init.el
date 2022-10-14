@@ -1,4 +1,4 @@
-; Packages
+;;; packages --- Summary
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -8,6 +8,10 @@
  '(package-selected-packages
    '(auctex evil go-mode flycheck lsp-mode magit pdf-tools rust-mode)))
 
+;;; Commentary:
+; trying to keep it at least a bit minimalistic
+
+;;; Code:
 ; Modes
 (column-number-mode)
 (evil-mode)
