@@ -1,4 +1,4 @@
-def_key "ä"
+def_key "'"
   next
-def_key "ö"
+def_key ";"
   previous

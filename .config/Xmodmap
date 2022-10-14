@@ -1,5 +1,0 @@
-keycode 34 = udiaeresis Udiaeresis udiaeresis Udiaeresis bar dead_diaeresis dead_abovering
-keycode 35 = plus asterisk plus asterisk asciitilde dead_tilde macron
-keycode 47 = odiaeresis Odiaeresis odiaeresis Odiaeresis less dead_doubleacute dead_belowdot
-keycode 48 = adiaeresis Adiaeresis adiaeresis Adiaeresis greater dead_caron dead_circumflex 
-keycode 91 = KP_Delete period KP_Delete period
