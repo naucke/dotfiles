@@ -18,7 +18,7 @@
 (global-display-line-numbers-mode)
 (global-flycheck-mode)
 (global-visual-line-mode)
-(ranger-override-dired-mode t)
+(ranger-override-dired-mode)
 (savehist-mode)
 (show-paren-mode)
 
