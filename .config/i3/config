@@ -88,6 +88,8 @@ workspace 1 output HDMI2
 bindsym Print exec org.flameshot.Flameshot gui
 client.focused #093748 $blue $bright-white
 
+for_window [instance="origin.exe"] floating enable
+
 exec --no-startup-id ~/.local/bin/ncmpcpp_coverd
 exec --no-startup-id ~/.local/bin/fehbg
 exec --no-startup-id redshift
