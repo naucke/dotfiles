@@ -1,7 +1,7 @@
 [Default Applications]
 application/json=vim.desktop
 application/octet-stream=vim.desktop
-application/pdf=org.gnome.Evince.desktop
+application/pdf=org.mozilla.firefox.desktop
 audio/flac=mpv.desktop
 audio/mpeg=mpv.desktop
 audio/mpegapplication/octet-stream=mpv.desktop
