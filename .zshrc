@@ -8,6 +8,14 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(brackets line main pattern regexp root)
 ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
 source "$ZSH/oh-my-zsh.sh"
 
+# Disable syntax highlighting in DAV directories
+nohl_dav() {
+	[[ $PWD =~ .*gvfs/dav.* && -z $nohl ]] && \
+		nohl=true && shift -p plugins && source $ZSH/oh-my-zsh.sh || \
+		{[ $nohl ] && unset nohl && plugins+=zsh-syntax-highlighting && source $ZSH/oh-my-zsh.sh}
+}
+add-zsh-hook chpwd nohl_dav
+
 # Fixing pasting
 pasteinit() {
 	OLD_SELF_INSERT=${${(s.:.)widgets[self-insert]}[2,3]}
