@@ -42,12 +42,13 @@
 (load-theme 'wombat)
 (set-cursor-color "#ffffff")
 
-; Evil exclusions
-(evil-set-initial-state 'compilation-mode 'emacs)
-(evil-set-initial-state 'image-mode 'emacs)
-(evil-set-initial-state 'image-dired-thumbnail-mode 'emacs)
-(evil-set-initial-state 'info-mode 'emacs)
-(evil-set-initial-state 'xref-mode 'emacs)
+; Evil, line number, and window exclusions
+(mapc (lambda (m) (evil-set-initial-state m 'emacs))
+      '(buffer-menu-mode compilation-mode image-mode image-dired-thumbnail-mode info-mode TeX-output-mode xref-mode))
+(mapc (lambda (m) (add-hook m (lambda () (display-line-numbers-mode 0))))
+      '(compilation-mode-hook eshell-mode-hook gdb-mode-hook inferior-python-mode-hook
+        jdb-mode-hook pdf-view-mode-hook TeX-output-mode-hook vterm-mode-hook))
+(setq same-window-buffer-names '("*compilation*"))
 
 ; LSP launchers
 (mapc (lambda (m) (add-hook m 'lsp-deferred))
