@@ -21,7 +21,7 @@ zstyle :bracketed-paste-magic paste-finish pastefinish
 
 # General variables
 export GOPATH="$HOME/Documents/go"
-export PATH="$PATH:$GOPATH/bin:$HOME/.local/bin"
+export PATH="$PATH:$GOPATH/bin:$HOME/.local/bin:$HOME/.local/share/coursier/bin"
 export EDITOR=vim
 export THREADS=8
 export MAKEFLAGS="-j$THREADS"
@@ -39,7 +39,7 @@ export DVDCSS_CACHE="$XDG_DATA_HOME/dvdcss"
 export GNUPGHOME="$XDG_DATA_HOME/gnupg"
 export ICEAUTHORITY="$XDG_CACHE_HOME/ICEauthority"
 export HISTFILE="$XDG_STATE_HOME/zsh/history"
-export _JAVA_OPTIONS="-Djava.util.prefs.userRoot=$XDG_CONFIG_HOME/java"
+export _JAVA_OPTIONS="-Djava.util.prefs.userRoot=/home/jakob/.config/java"
 export NODE_REPL_HISTORY="$XDG_DATA_HOME/node_repl_history"
 export MAXIMA_USERDIR="$XDG_CONFIG_HOME/maxima"
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
