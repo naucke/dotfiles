@@ -26,6 +26,7 @@
 ; Settings
 (setq compilation-scroll-output t
       display-line-numbers-type 'relative
+      initial-major-mode 'text-mode
       mouse-yank-at-point t
       scroll-margin 4
       scroll-step 1
