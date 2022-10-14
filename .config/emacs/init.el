@@ -6,7 +6,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(auctex evil go-mode flycheck lsp-mode magit pdf-tools rust-mode)))
+   '(auctex elpy evil geiser-racket go-mode flycheck lsp-metals lsp-mode magit pdf-tools scala-mode rust-mode)))
 
 ;;; Commentary:
 ; trying to keep it at least a bit minimalistic
@@ -47,10 +47,9 @@
 (evil-set-initial-state 'xref-mode 'emacs)
 
 ; LSP launchers
-(add-hook 'c-mode-hook 'lsp-deferred)
-(add-hook 'go-mode-hook 'lsp-deferred)
-(add-hook 'rust-mode-hook 'lsp-deferred)
-(add-hook 'python-mode-hook 'lsp-deferred)
+(mapc (lambda (m) (add-hook m 'lsp-deferred))
+      '(c-mode-hook c++-mode-hook go-mode-hook rust-mode-hook python-mode-hook scala-mode-hook))
+(add-hook 'python-mode-hook 'elpy-enable)
 
 ; No tabs
 (defun disable-tabs () (setq indent-tabs-mode nil))
