@@ -29,11 +29,13 @@
       scroll-margin 4
       scroll-step 1
       visible-bell t)
+(add-hook 'compilation-filter-hook 'ansi-color-compilation-filter)
+(put 'magit-clean 'disabled nil)
 
 ; Graphical mode fixes (does not apply to emacs-nox)
 (blink-cursor-mode -1)
-(toggle-scroll-bar -1)
 (tool-bar-mode -1)
+(set-scroll-bar-mode nil)
 
 ; Styling (dto. emacs-nox)
 (add-to-list 'default-frame-alist '(font . "IBM Plex Mono-10"))
@@ -53,8 +55,7 @@
 (add-hook 'python-mode-hook 'elpy-enable)
 
 ; No tabs
-(defun disable-tabs () (setq indent-tabs-mode nil))
-(add-hook 'rust-mode-hook 'disable-tabs)
+(add-hook 'rust-mode-hook (lambda () (setq indent-tabs-mode nil)))
 
 ; AucTeX
 (pdf-tools-install)
