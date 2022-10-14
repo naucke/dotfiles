@@ -6,7 +6,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(auctex elpy evil geiser-racket go-mode flycheck lsp-metals lsp-mode magit pdf-tools scala-mode ranger rust-mode)))
+   '(auctex elpy evil geiser-racket go-mode flycheck lsp-metals lsp-mode magit pdf-tools scala-mode ranger rust-mode vterm)))
 
 ;;; Commentary:
 ; trying to keep it at least a bit minimalistic
