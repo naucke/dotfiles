@@ -45,8 +45,9 @@
 (set-cursor-color "#ffffff")
 
 ; Evil, line number, and window exclusions
-(mapc (lambda (m) (evil-set-initial-state m 'emacs))
-      '(buffer-menu-mode compilation-mode image-mode image-dired-thumbnail-mode info-mode TeX-output-mode xref-mode))
+(mapc (lambda (m) (add-hook m 'turn-off-evil-mode))
+      '(buffer-menu-mode-hook compilation-mode-hook image-mode-hook
+        image-dired-thumbnail-mode-hook Info-mode-hook TeX-output-mode-hook xref-mode-hook))
 (mapc (lambda (m) (add-hook m (lambda () (display-line-numbers-mode 0))))
       '(compilation-mode-hook eshell-mode-hook gdb-mode-hook inferior-python-mode-hook
         jdb-mode-hook pdf-view-mode-hook TeX-output-mode-hook vterm-mode-hook))
