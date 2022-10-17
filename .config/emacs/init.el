@@ -52,7 +52,8 @@
 (mapc (lambda (m) (add-hook m (lambda () (display-line-numbers-mode 0))))
       '(compilation-mode-hook eshell-mode-hook gdb-mode-hook inferior-python-mode-hook
         jdb-mode-hook pdf-view-mode-hook TeX-output-mode-hook vterm-mode-hook))
-(setq same-window-buffer-names '("*compilation*"))
+(add-to-list 'same-window-buffer-names "*compilation*")
+(add-to-list 'same-window-regexps "magit: .+")
 
 ; LSP launchers
 (mapc (lambda (m) (add-hook m 'lsp-deferred))
