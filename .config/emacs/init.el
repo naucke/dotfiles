@@ -22,6 +22,7 @@
 (ranger-override-dired-mode)
 (savehist-mode)
 (show-paren-mode)
+(winner-mode)
 
 ; Settings
 (setq compilation-scroll-output t
