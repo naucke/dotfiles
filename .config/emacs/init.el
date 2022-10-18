@@ -25,7 +25,8 @@
 (winner-mode)
 
 ; Settings
-(setq compilation-scroll-output t
+(setq backup-directory-alist '(("." . "~/.cache/emacs"))
+      compilation-scroll-output t
       display-line-numbers-type 'relative
       initial-major-mode 'text-mode
       mouse-yank-at-point t
