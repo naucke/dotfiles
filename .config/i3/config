@@ -92,6 +92,7 @@ for_window [instance="origin.exe"] floating enable
 
 exec --no-startup-id ~/.local/bin/fehbg
 exec --no-startup-id ~/.local/bin/ncmpcpp_coverd
+exec --no-startup-id ~/.local/bin/sync_orgzlyd
 exec --no-startup-id inputplug -c ~/.local/bin/xsettings
 exec --no-startup-id joystickwake
 exec --no-startup-id redshift
