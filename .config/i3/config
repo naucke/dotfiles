@@ -90,9 +90,11 @@ client.focused #093748 $blue $bright-white
 
 for_window [instance="origin.exe"] floating enable
 
-exec --no-startup-id ~/.local/bin/ncmpcpp_coverd
 exec --no-startup-id ~/.local/bin/fehbg
-exec --no-startup-id redshift
-exec --no-startup-id joystickwake
+exec --no-startup-id ~/.local/bin/ncmpcpp_coverd
 exec --no-startup-id inputplug -c ~/.xprofile
+exec --no-startup-id joystickwake
+exec --no-startup-id redshift
 exec --no-startup-id picom
+exec --no-startup-id /var/lib/flatpak/exports/bin/org.davmail.DavMail
+exec --no-startup-id /var/lib/flatpak/exports/bin/com.nextcloud.desktopclient.nextcloud
