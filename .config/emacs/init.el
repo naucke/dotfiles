@@ -37,6 +37,8 @@
       scroll-step 1
       visible-bell t)
 (add-hook 'compilation-filter-hook 'ansi-color-compilation-filter)
+(defun sync-orgzly nil "Sync org files with orgzly on mobile." (interactive)
+       (shell-command "rclone bisync orgzly: ~/Documents/orgzly"))
 (put 'magit-clean 'disabled nil)
 
 ; Graphical mode fixes (does not apply to emacs-nox)
