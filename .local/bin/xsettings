@@ -1,5 +1,5 @@
 #!/bin/bash
-setxkbmap us altgr-intl
+setxkbmap eu
 setxkbmap -option caps:swapescape
 numlockx on
 xset m 0 0
