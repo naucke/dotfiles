@@ -59,7 +59,7 @@
       '(compilation-mode-hook eshell-mode-hook gdb-mode-hook inferior-python-mode-hook
         jdb-mode-hook pdf-view-mode-hook TeX-output-mode-hook vterm-mode-hook))
 (mapc (lambda (b) (add-to-list 'same-window-buffer-names b))
-      '("*compilation*" "*Python*" "*Geiser Racket REPL*"))
+      '("*compilation*" "*Help*" "*Python*" "*Geiser Racket REPL*"))
 (add-to-list 'same-window-regexps "magit: .+")
 
 ; LSP launchers
