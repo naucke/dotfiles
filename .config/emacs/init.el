@@ -52,7 +52,7 @@
 (set-cursor-color "#ffffff")
 
 ; Evil, line number, and window exclusions
-(mapc (lambda (m) (evil-set-initial-state  m 'emacs))
+(mapc (lambda (m) (evil-set-initial-state m 'emacs))
       '(buffer-menu-mode compilation-mode image-mode image-dired-thumbnail-mode
         Info-mode TeX-output-mode xref-mode))
 (mapc (lambda (m) (add-hook m (lambda () (display-line-numbers-mode 0))))
@@ -60,7 +60,8 @@
         jdb-mode-hook pdf-view-mode-hook TeX-output-mode-hook vterm-mode-hook))
 (mapc (lambda (b) (add-to-list 'same-window-buffer-names b))
       '("*compilation*" "*Help*" "*Python*" "*Geiser Racket REPL*"))
-(add-to-list 'same-window-regexps "magit: .+")
+(mapc (lambda (r) (add-to-list 'same-window-regexps r))
+      '("magit: .+" ".+\.pdf"))
 
 ; LSP launchers
 (mapc (lambda (m) (add-hook m 'lsp-deferred))
