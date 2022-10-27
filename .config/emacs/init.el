@@ -17,6 +17,7 @@
 ;;; Code:
 ; Modes
 (column-number-mode)
+(electric-pair-mode)
 (evil-mode)
 (global-display-line-numbers-mode)
 (global-flycheck-mode)
