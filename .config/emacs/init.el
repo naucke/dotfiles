@@ -69,6 +69,7 @@
 ; LSP launchers
 (mapc (lambda (m) (add-hook m 'lsp-deferred))
       '(c-mode-hook c++-mode-hook go-mode-hook rust-mode-hook python-mode-hook scala-mode-hook))
+(add-hook 'lsp-mode-hook (lambda () (define-key lsp-mode-map (kbd "M-o") lsp-command-map)))
 (add-hook 'python-mode-hook 'elpy-enable)
 
 ; No tabs
