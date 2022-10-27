@@ -26,6 +26,7 @@
 (ranger-override-dired-mode)
 (savehist-mode)
 (show-paren-mode)
+(tab-bar-mode)
 (winner-mode)
 
 ; Settings
