@@ -47,7 +47,8 @@
 (set-scroll-bar-mode nil)
 
 ; Styling (dto. emacs-nox)
-(add-to-list 'default-frame-alist '(font . "IBM Plex Mono-10"))
+(mapc (lambda (p) (add-to-list 'default-frame-alist p))
+      '((font . "IBM Plex Mono-10") (fullscreen . maximized)))
 (load-theme 'wombat)
 (set-cursor-color "#ffffff")
 
