@@ -35,7 +35,8 @@
       mouse-yank-at-point t
       scroll-margin 4
       scroll-step 1
-      visible-bell t)
+      visible-bell t
+      vc-follow-symlinks t)
 (add-hook 'compilation-filter-hook 'ansi-color-compilation-filter)
 (defun sync-orgzly nil "Sync org files with orgzly on mobile." (interactive)
        (shell-command "rclone bisync orgzly: ~/Documents/orgzly"))
