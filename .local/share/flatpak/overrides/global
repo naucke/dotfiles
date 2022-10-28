@@ -1,2 +1,4 @@
 [Environment]
 GTK_THEME=Arc-Dark
+MANGOHUD_CONFIG=cpu_temp,ram,gpu_temp,gpu_core_clock,vram,position=top-right
+MANGOHUD=1
