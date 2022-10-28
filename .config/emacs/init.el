@@ -9,7 +9,7 @@
    '(; Languages
      auctex elpy geiser-racket go-mode lsp-metals scala-mode rust-mode
      ; Workflow
-     evil flycheck lsp-mode magit pdf-tools ranger vterm)))
+     evil flycheck hl-todo lsp-mode magit pdf-tools ranger vterm)))
 
 ;;; Commentary:
 ; trying to keep it at least a bit minimalistic
@@ -21,6 +21,7 @@
 (evil-mode)
 (global-display-line-numbers-mode)
 (global-flycheck-mode)
+(global-hl-todo-mode)
 (global-visual-line-mode)
 (icomplete-mode)
 (ranger-override-dired-mode)
