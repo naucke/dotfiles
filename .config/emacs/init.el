@@ -7,7 +7,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    '(; Languages
-     auctex elpy geiser-racket go-mode lsp-metals scala-mode rust-mode
+     auctex elpy flymake-shellcheck geiser-racket go-mode lsp-metals scala-mode rust-mode
      ; Workflow
      evil flycheck hl-todo lsp-mode magit pdf-tools ranger vterm)))
 
@@ -70,7 +70,8 @@
 
 ; LSP launchers
 (mapc (lambda (m) (add-hook m 'lsp-deferred))
-      '(c-mode-hook c++-mode-hook go-mode-hook rust-mode-hook python-mode-hook scala-mode-hook))
+      '(c-mode-hook c++-mode-hook go-mode-hook rust-mode-hook
+        python-mode-hook scala-mode-hook sh-mode-hook))
 (add-hook 'lsp-mode-hook (lambda () (define-key lsp-mode-map (kbd "M-o") lsp-command-map)))
 (add-hook 'python-mode-hook 'elpy-enable)
 
