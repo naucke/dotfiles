@@ -7,7 +7,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    '(; Languages
-     auctex elpy flymake-shellcheck geiser-racket go-mode lsp-metals scala-mode rust-mode
+     auctex elpy flymake-shellcheck geiser-racket go-mode lsp-metals scala-mode rust-mode yaml-mode
      ; Workflow
      evil flycheck hl-todo lsp-mode magit pdf-tools ranger vterm)))
 
