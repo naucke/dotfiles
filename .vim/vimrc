@@ -2,8 +2,9 @@ set viminfofile=$XDG_STATE_HOME/vim/viminfo
 
 syntax on
 
-set title
+set background=dark
 set number relativenumber
+set title
 
 set incsearch
 set nohlsearch

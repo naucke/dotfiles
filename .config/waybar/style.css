@@ -1,0 +1,84 @@
+* {
+	border-radius: 0;
+	font-family: IBM Plex Sans;
+	font-size: 13px;
+	min-height: 0;
+}
+
+#waybar {
+	background-color: rgba(10, 15, 20, 0.5);
+}
+
+#workspaces button, #mode, #idle_inhibitor, #mpd, #mpd.stopped,
+#window,
+#network, #custom-gpu-load, #custom-gpu-temperature, #custom-gpu-memory, #pulseaudio, #cpu, #temperature, #memory, #disk, #clock, #tray {
+	color: #d3ebe9;
+	padding: 0 5px;
+}
+
+#workspaces button.focused, #clock.date {
+	background-color: #296475;
+}
+#workspaces button.visible, #clock.time {
+	background-color: #195465;
+}
+#workspaces button.urgent, #mpd.disconnected, #network.disconnected, #temperature.critical, #tray > .needs-attention {
+	background-color: #d02020;
+}
+
+#mode, #idle_inhibitor, #mpd.stopped {
+	background-color: #2e3145;
+}
+
+#idle_inhibitor.activated {
+	background-color: #edb54b;
+}
+
+#pulseaudio, #cpu {
+	background-color: #53a5bd;
+}
+#pulseaudio.muted, #memory {
+	background-color: #33859d;
+}
+
+#mpd, #custom-gpu-load {
+	background-color: #26a98b;
+}
+#mpd.paused, #custom-gpu-memory  {
+	background-color: #06896b;
+}
+
+#network {
+	min-width: 40px;
+}
+#network.up {
+	background-color: #888ba5;
+}
+#network.down {
+	background-color: #787b95;
+}
+#network.wlan {
+	background-color: #686b85;
+}
+
+#custom-gpu-temperature {
+	background-color: #16997b;
+}
+
+#temperature {
+	background-color: #4395ad;
+}
+
+#disk.ssd {
+	background-color: #4e5165;
+}
+#disk.luks {
+	background-color: #3e4155;
+}
+#disk.vera {
+	background-color: #2e3145;
+}
+
+#tray {
+	background-color: #094455;
+}

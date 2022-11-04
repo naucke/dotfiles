@@ -27,36 +27,8 @@ pastefinish() {
 zstyle :bracketed-paste-magic paste-init pasteinit
 zstyle :bracketed-paste-magic paste-finish pastefinish
 
-# General variables
-export GOPATH="$HOME/Documents/go"
-export PATH="$PATH:$GOPATH/bin:$HOME/.local/bin:$HOME/.local/share/coursier/bin"
-export EDITOR=vim
-export THREADS=8
-export MAKEFLAGS="-j$THREADS"
 PS1="%F{cyan}%(?..%? )%F{cyan}%B░▒▓█%F{white}%K{cyan}%n@%m%F{cyan}%K{txtrst}█▓▒░ %F{cyan}%B%~ %% "
-
-# Directories
-export XDG_CACHE_HOME="$HOME/.cache"
-export XDG_CONFIG_HOME="$HOME/.config"
-export XDG_DATA_HOME="$HOME/.local/share"
-export XDG_STATE_HOME="$HOME/.local/state"
-export ANDROID_HOME="$XDG_DATA_HOME/android"
-export CARGO_HOME="$XDG_DATA_HOME/cargo"
-export CUDA_CACHE_PATH="$XDG_CACHE_HOME/nv"
-export DVDCSS_CACHE="$XDG_DATA_HOME/dvdcss"
-export GNUPGHOME="$XDG_DATA_HOME/gnupg"
-export ICEAUTHORITY="$XDG_CACHE_HOME/ICEauthority"
-export HISTFILE="$XDG_STATE_HOME/zsh/history"
-export _JAVA_OPTIONS="-Djava.util.prefs.userRoot=/home/jakob/.config/java"
-export NODE_REPL_HISTORY="$XDG_DATA_HOME/node_repl_history"
-export MAXIMA_USERDIR="/home/jakob/.config/maxima"
-export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
-export NVM_DIR="$XDG_CONFIG_HOME/nvm"
-export PARALLEL_HOME="$XDG_CONFIG_HOME/parallel"
-export PYTHONHISTFILE="$XDG_DATA_HOME/python_history"
-export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
-export RXVT_SOCKET="$XDG_RUNTIME_DIR/urxvtd"
-export TEXMFVAR="$XDG_CACHE_HOME/texlive/texmf-var"
+[ -z $GOPATH ] && source "$HOME/.config/environment.d/env.conf"
 
 # Short aliases
 alias j="joplin"
@@ -65,15 +37,13 @@ alias n="ncmpcpp"
 alias r="ranger"
 alias v="vim"
 
+# Swapping aliases
+alias normalcaps="swaymsg input '*' xkb_options escape:escape"
+alias swapcaps="swaymsg input '*' xkb_options caps:swapescape"
+
 # Safety aliases
 alias cp="cp --interactive"
 alias mv="mv --interactive"
-
-# Swapping aliases
-alias nosleep="xset -dpms && xset s off"
-alias dosleep="xset s on"
-alias normalcaps="setxkbmap -option && setxkbmap de"
-alias swapcaps="setxkbmap -option caps:swapescape"
 
 # Convenience aliases
 alias config='git --git-dir=$HOME/.cfg/ --work-tree=$HOME'

@@ -1,0 +1,51 @@
+[
+	{
+		"output": "HDMI-A-4",
+		"modules-left": ["sway/workspaces", "sway/mode", "idle_inhibitor", "pulseaudio", "mpd"],
+		"modules-center": ["sway/window"],
+		"modules-right": ["network#up", "network#down", "network#wlan", "cpu", "temperature", "memory", "disk#ssd", "disk#luks", "disk#vera", "clock#date", "clock#time", "tray"],
+		"include": "$XDG_CONFIG_HOME/waybar/common",
+
+		"mpd": {
+			"server": "/home/jakob/.config/mpd/socket",
+			"format": "{stateIcon}{randomIcon} {title} – {album} – {} ({elapsedTime:%M:%S}/{totalTime:%M:%S})",
+			"format-stopped": "",
+			"format-disconnected": "",
+			"state-icons": {
+				"playing": "",
+				"paused": ""
+			},
+			"random-icons": {
+				"on": " "
+			},
+			"on-click": "mpc --host=/home/jakob/.config/mpd/socket toggle",
+			"on-click-right": "mpc --host=/home/jakob/.config/mpd/socket random",
+			"on-click-middle": "mpc --host=/home/jakob/.config/mpd/socket stop",
+			"on-scroll-up": "mpc --host=/home/jakob/.config/mpd/socket prev",
+			"on-scroll-down": "mpc --host=/home/jakob/.config/mpd/socket next",
+			"max-length": 80
+		},
+		"disk#ssd": {
+			 "path": "/",
+			 "format": "{percentage_used}% 兩",
+			 "interval": 5
+		},
+		"disk#luks": {
+			 "path": "/mnt/luks",
+			 "format": "{percentage_used}% ",
+			 "interval": 5
+		},
+		"disk#vera": {
+			 "path": "/mnt/vera1",
+			 "format": "{percentage_used}% ",
+			 "interval": 5
+		}
+	},
+	{
+		"output": "HDMI-A-3",
+		"modules-left": ["sway/workspaces", "sway/mode", "idle_inhibitor", "pulseaudio"],
+		"modules-center": ["sway/window"],
+		"modules-right": ["network#up", "network#down", "network#wlan", "cpu", "temperature", "memory", "clock#date", "clock#time", "tray"],
+		"include": "/home/jakob/.config/waybar/common"
+	}
+]
