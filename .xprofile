@@ -1,7 +1,0 @@
-source /etc/X11/xrandr
-# Set for Cargo so it is already set
-export XDG_DATA_HOME="$HOME/.local/share"
-eval $(grep ^export ~/.zshrc)
-export GTK2_RC_FILES=~/.config/gtk-2.0/gtkrc
-export QT_QPA_PLATFORMTHEME=qt5ct
-xsettings
