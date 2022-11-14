@@ -31,19 +31,22 @@
 (winner-mode)
 
 ; Settings
-(setq backup-directory-alist '(("." . "~/.cache/emacs"))
-      compilation-scroll-output t
-      display-line-numbers-type 'relative
-      initial-major-mode 'text-mode
-      mouse-yank-at-point t
-      scroll-margin 4
-      scroll-step 1
-      visible-bell t
-      vc-follow-symlinks t)
+(setq
+ backup-directory-alist '(("." . "~/.cache/emacs"))
+ compilation-scroll-output t
+ display-line-numbers-type 'relative
+ initial-major-mode 'text-mode
+ mouse-yank-at-point t
+ scroll-margin 4
+ scroll-step 1
+ visible-bell t
+ vc-follow-symlinks t
+)
 (add-hook 'compilation-filter-hook 'ansi-color-compilation-filter)
 (defun sync-orgzly nil "Sync org files with orgzly on mobile." (interactive)
        (shell-command "rclone bisync orgzly: ~/Documents/orgzly"))
 (put 'magit-clean 'disabled nil)
+
 
 ; Graphical mode fixes (does not apply to emacs-nox)
 (blink-cursor-mode -1)
@@ -58,20 +61,53 @@
 
 ; Evil, line number, and window exclusions
 (mapc (lambda (m) (evil-set-initial-state m 'emacs))
-      '(buffer-menu-mode compilation-mode image-mode image-dired-thumbnail-mode
-        Info-mode TeX-output-mode xref-mode))
+      '(
+	buffer-menu-mode
+        compilation-mode
+        image-mode
+        image-dired-thumbnail-mode
+        Info-mode
+        TeX-output-mode
+        xref-mode
+       ))
 (mapc (lambda (m) (add-hook m (lambda () (display-line-numbers-mode 0))))
-      '(compilation-mode-hook eshell-mode-hook gdb-mode-hook inferior-python-mode-hook
-        jdb-mode-hook pdf-view-mode-hook TeX-output-mode-hook vterm-mode-hook))
+      '(
+        compilation-mode-hook
+        eshell-mode-hook
+        gdb-mode-hook
+        inferior-python-mode-hook
+        jdb-mode-hook
+        org-agenda-mode-hook
+        pdf-view-mode-hook
+        TeX-output-mode-hook
+        vterm-mode-hook
+       ))
 (mapc (lambda (b) (add-to-list 'same-window-buffer-names b))
-      '("*compilation*" "*Help*" "*xref*" "*Python*" "*Geiser Racket REPL*"))
+      '(
+        "*compilation*"
+        "*Help*"
+        "*xref*"
+        "*Python*"
+        "*Geiser Racket REPL*"
+       ))
 (mapc (lambda (r) (add-to-list 'same-window-regexps r))
-      '("magit: .+" ".+\.pdf"))
+      '(
+        "magit: .+"
+        ".+\.pdf"
+       ))
 
 ; LSP launchers
 (mapc (lambda (m) (add-hook m 'lsp-deferred))
-      '(c-mode-hook c++-mode-hook go-mode-hook rust-mode-hook perl-mode-hook
-        python-mode-hook scala-mode-hook sh-mode-hook))
+      '(
+        c-mode-hook
+        c++-mode-hook
+        go-mode-hook
+        rust-mode-hook
+        perl-mode-hook
+        python-mode-hook
+        scala-mode-hook
+        sh-mode-hook
+       ))
 (add-hook 'lsp-mode-hook (lambda () (define-key lsp-mode-map (kbd "M-o") lsp-command-map)))
 (add-hook 'python-mode-hook 'elpy-enable)
 
