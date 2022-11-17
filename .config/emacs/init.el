@@ -108,6 +108,7 @@
         sh-mode-hook
        ))
 (add-hook 'lsp-mode-hook (lambda () (define-key lsp-mode-map (kbd "M-o") lsp-command-map)))
+(add-hook 'lean-mode-hook (lambda () (set-input-method 'Lean)))
 (add-hook 'python-mode-hook 'elpy-enable)
 
 ; No tabs
