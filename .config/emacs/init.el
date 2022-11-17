@@ -7,7 +7,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    '(; Languages
-     auctex elpy flymake-shellcheck geiser-racket go-mode lsp-metals scala-mode rust-mode yaml-mode
+     auctex elpy flymake-shellcheck go-mode lean-mode rust-mode yaml-mode
      ; Workflow
      evil flycheck hl-todo lsp-mode magit pdf-tools ranger vterm)))
 
@@ -105,7 +105,6 @@
         rust-mode-hook
         perl-mode-hook
         python-mode-hook
-        scala-mode-hook
         sh-mode-hook
        ))
 (add-hook 'lsp-mode-hook (lambda () (define-key lsp-mode-map (kbd "M-o") lsp-command-map)))
