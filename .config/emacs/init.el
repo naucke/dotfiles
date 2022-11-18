@@ -37,6 +37,7 @@
  display-line-numbers-type 'relative
  initial-major-mode 'text-mode
  mouse-yank-at-point t
+ org-tags-column 0
  scroll-margin 4
  scroll-step 1
  visible-bell t
