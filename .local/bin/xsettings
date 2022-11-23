@@ -1,5 +1,0 @@
-#!/bin/bash
-setxkbmap eu
-setxkbmap -option caps:swapescape
-numlockx on
-xset m 0 0
