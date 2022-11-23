@@ -6,7 +6,7 @@
 		"include": ["/etc/waybar/displays", "$XDG_CONFIG_HOME/waybar/common"],
 
 		"mpd": {
-			"server": "/home/jakob/.config/mpd/socket",
+			"server": "$XDG_CONFIG_HOME/mpd/socket",
 			"format": "{stateIcon}{randomIcon} {title} – {album} – {} ({elapsedTime:%M:%S}/{totalTime:%M:%S})",
 			"format-stopped": "",
 			"format-disconnected": "",
@@ -17,11 +17,11 @@
 			"random-icons": {
 				"on": " "
 			},
-			"on-click": "mpc --host=/home/jakob/.config/mpd/socket toggle",
-			"on-click-right": "mpc --host=/home/jakob/.config/mpd/socket random",
-			"on-click-middle": "mpc --host=/home/jakob/.config/mpd/socket stop",
-			"on-scroll-up": "mpc --host=/home/jakob/.config/mpd/socket prev",
-			"on-scroll-down": "mpc --host=/home/jakob/.config/mpd/socket next",
+			"on-click": "mpc --host=$XDG_CONFIG_HOME/mpd/socket toggle",
+			"on-click-right": "mpc --host=$XDG_CONFIG_HOME/mpd/socket random",
+			"on-click-middle": "mpc --host=$XDG_CONFIG_HOME/mpd/socket stop",
+			"on-scroll-up": "mpc --host=$XDG_CONFIG_HOME/mpd/socket prev",
+			"on-scroll-down": "mpc --host=$XDG_CONFIG_HOME/mpd/socket next",
 			"max-length": 80
 		},
 		"disk#ssd": {
@@ -40,6 +40,6 @@
 		"modules-left": ["sway/workspaces", "sway/mode", "idle_inhibitor", "pulseaudio"],
 		"modules-center": ["sway/window"],
 		"modules-right": ["network#up", "network#down", "network#wlan", "cpu", "temperature", "memory", "clock#date", "clock#time", "tray"],
-		"include": "/home/jakob/.config/waybar/common"
+		"include": "$XDG_CONFIG_HOME/waybar/common"
 	}
 ]
