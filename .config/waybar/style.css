@@ -1,8 +1,9 @@
 * {
 	border-radius: 0;
-	font-family: IBM Plex Sans;
+	font-family: IBM Plex Sans, BlexMono Nerd Font;
 	font-size: 13px;
 	min-height: 0;
+	color: #d3ebe9;
 }
 
 #waybar {
@@ -12,7 +13,6 @@
 #workspaces button, #mode, #idle_inhibitor, #mpd, #mpd.stopped,
 #window,
 #network, #custom-gpu-load, #custom-gpu-temperature, #custom-gpu-memory, #pulseaudio, #cpu, #temperature, #memory, #disk, #clock, #tray {
-	color: #d3ebe9;
 	padding: 0 5px;
 }
 
@@ -48,8 +48,8 @@
 	background-color: #06896b;
 }
 
-#network {
-	min-width: 40px;
+#network.up, #network.down {
+	min-width: 80px;
 }
 #network.up {
 	background-color: #888ba5;
