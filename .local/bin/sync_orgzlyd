@@ -1,7 +1,0 @@
-#!/bin/bash
-dir=~/Documents/orgzly
-while :
-do
-	rclone bisync orgzly: $dir
-	inotifywait --recursive --timeout 300 -e create,delete,modify,move $dir
-done

@@ -93,7 +93,6 @@ exec gammastep
 exec joystickwake
 exec mako
 exec ncmpcpp_coverd
-exec sync_orgzlyd
 exec org.davmail.DavMail
 exec com.nextcloud.desktopclient.nextcloud
 
