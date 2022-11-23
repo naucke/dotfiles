@@ -70,7 +70,7 @@
         image-dired-thumbnail-mode
         Info-mode
         TeX-output-mode
-        xref-mode
+        xref--xref-buffer-mode
        ))
 (mapc (lambda (m) (add-hook m (lambda () (display-line-numbers-mode 0))))
       '(
