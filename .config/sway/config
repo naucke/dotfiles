@@ -9,12 +9,7 @@ set $right l
 set $term alacritty
 set $menu bemenu-run -i --fn "IBM Plex Sans" --tf $blue --hf $blue
 
-output {
-    HDMI-A-4 pos 0    0 bg ~/Desktop/Desktop_left.png  fill
-    # HDMI-A-1 pos 0    0 bg ~/Desktop/Desktop_left.png  fill
-    HDMI-A-3 pos 1920 0 bg ~/Desktop/Desktop_right.png fill
-    HDMI-A-1 disable
-}
+include /etc/sway/displays
 
 input * {
     xkb_layout eu

@@ -1,10 +1,9 @@
 [
 	{
-		"output": "HDMI-A-4",
 		"modules-left": ["sway/workspaces", "sway/mode", "idle_inhibitor", "pulseaudio", "mpd"],
 		"modules-center": ["sway/window"],
 		"modules-right": ["network#up", "network#down", "network#wlan", "cpu", "temperature", "memory", "disk#ssd", "disk#luks", "clock#date", "clock#time", "tray"],
-		"include": "$XDG_CONFIG_HOME/waybar/common",
+		"include": ["/etc/waybar/displays", "$XDG_CONFIG_HOME/waybar/common"],
 
 		"mpd": {
 			"server": "/home/jakob/.config/mpd/socket",
