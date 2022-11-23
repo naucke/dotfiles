@@ -3,7 +3,7 @@
 		"output": "HDMI-A-4",
 		"modules-left": ["sway/workspaces", "sway/mode", "idle_inhibitor", "pulseaudio", "mpd"],
 		"modules-center": ["sway/window"],
-		"modules-right": ["network#up", "network#down", "network#wlan", "cpu", "temperature", "memory", "disk#ssd", "disk#luks", "disk#vera", "clock#date", "clock#time", "tray"],
+		"modules-right": ["network#up", "network#down", "network#wlan", "cpu", "temperature", "memory", "disk#ssd", "disk#luks", "clock#date", "clock#time", "tray"],
 		"include": "$XDG_CONFIG_HOME/waybar/common",
 
 		"mpd": {
@@ -35,11 +35,6 @@
 			 "format": "{percentage_used}% ",
 			 "interval": 5
 		},
-		"disk#vera": {
-			 "path": "/mnt/vera1",
-			 "format": "{percentage_used}% ",
-			 "interval": 5
-		}
 	},
 	{
 		"output": "HDMI-A-3",
