@@ -6,7 +6,7 @@
 		"include": ["/etc/waybar/displays", "$XDG_CONFIG_HOME/waybar/common"],
 
 		"mpd": {
-			"server": "$XDG_CONFIG_HOME/mpd/socket",
+			"server": "/home/jakob/.config/mpd/socket",
 			"format": "{stateIcon}{randomIcon} {title} – {album} – {} ({elapsedTime:%M:%S}/{totalTime:%M:%S})",
 			"format-stopped": "",
 			"format-disconnected": "",
@@ -17,11 +17,11 @@
 			"random-icons": {
 				"on": " "
 			},
-			"on-click": "mpc --host=$XDG_CONFIG_HOME/mpd/socket toggle",
-			"on-click-right": "mpc --host=$XDG_CONFIG_HOME/mpd/socket random",
-			"on-click-middle": "mpc --host=$XDG_CONFIG_HOME/mpd/socket stop",
-			"on-scroll-up": "mpc --host=$XDG_CONFIG_HOME/mpd/socket prev",
-			"on-scroll-down": "mpc --host=$XDG_CONFIG_HOME/mpd/socket next",
+			"on-click": "mpc --host=/home/jakob/.config/mpd/socket toggle",
+			"on-click-right": "mpc --host=/home/jakob/.config/mpd/socket random",
+			"on-click-middle": "mpc --host=/home/jakob/.config/mpd/socket stop",
+			"on-scroll-up": "mpc --host=/home/jakob/.config/mpd/socket prev",
+			"on-scroll-down": "mpc --host=/home/jakob/.config/mpd/socket next",
 			"max-length": 80
 		},
 		"disk#ssd": {
