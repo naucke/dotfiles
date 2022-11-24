@@ -21,6 +21,7 @@
  backup-directory-alist '(("." . "~/.cache/emacs"))
  compilation-scroll-output t
  display-line-numbers-type 'relative
+ evil-want-C-i-jump nil
  initial-major-mode 'text-mode
  mouse-yank-at-point t
  org-tags-column 0
