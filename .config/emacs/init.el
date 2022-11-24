@@ -16,21 +16,6 @@
 ; trying to keep it at least a bit minimalistic
 
 ;;; Code:
-; Modes
-(column-number-mode)
-(electric-pair-mode)
-(evil-mode)
-(global-display-line-numbers-mode)
-(global-flycheck-mode)
-(global-hl-todo-mode)
-(global-visual-line-mode)
-(icomplete-mode)
-(ranger-override-dired-mode)
-(savehist-mode)
-(show-paren-mode)
-(tab-bar-mode)
-(winner-mode)
-
 ; Settings
 (setq
  backup-directory-alist '(("." . "~/.cache/emacs"))
@@ -47,6 +32,20 @@
 (add-hook 'compilation-filter-hook 'ansi-color-compilation-filter)
 (put 'magit-clean 'disabled nil)
 
+; Modes
+(column-number-mode)
+(electric-pair-mode)
+(evil-mode)
+(global-display-line-numbers-mode)
+(global-flycheck-mode)
+(global-hl-todo-mode)
+(global-visual-line-mode)
+(icomplete-mode)
+(ranger-override-dired-mode)
+(savehist-mode)
+(show-paren-mode)
+(tab-bar-mode)
+(winner-mode)
 
 ; Graphical mode fixes (does not apply to emacs-nox)
 (blink-cursor-mode -1)
