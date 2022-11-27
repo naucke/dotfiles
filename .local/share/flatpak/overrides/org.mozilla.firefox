@@ -1,2 +1,2 @@
 [Context]
-filesystems=~/Downloads;~/.rustup
+filesystems=~/.local/share/rustup
