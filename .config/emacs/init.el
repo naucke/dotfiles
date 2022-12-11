@@ -24,6 +24,9 @@
  evil-want-C-i-jump nil
  initial-major-mode 'text-mode
  mouse-yank-at-point t
+ org-agenda-file-regexp ".*todo\.org"
+ org-agenda-todo-ignore-scheduled 'future
+ org-enforce-todo-dependencies t
  org-tags-column 0
  scroll-margin 4
  scroll-step 1
