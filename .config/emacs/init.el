@@ -28,6 +28,7 @@
  org-agenda-todo-ignore-scheduled 'future
  org-enforce-todo-dependencies t
  org-tags-column 0
+ scroll-conservatively 30
  scroll-margin 4
  scroll-step 1
  visible-bell t
