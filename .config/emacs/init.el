@@ -27,6 +27,7 @@
  org-agenda-file-regexp ".*todo\.org"
  org-agenda-todo-ignore-scheduled 'future
  org-enforce-todo-dependencies t
+ org-log-repeat nil
  org-tags-column 0
  scroll-conservatively 30
  scroll-margin 4
