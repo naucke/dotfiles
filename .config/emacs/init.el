@@ -26,6 +26,7 @@
  mouse-yank-at-point t
  org-agenda-files '("~/Documents/orgzly")
  org-agenda-file-regexp "\\`.*todo\\.org\\'"
+ org-agenda-show-future-repeats 'next
  org-agenda-todo-ignore-scheduled 'future
  org-enforce-todo-dependencies t
  org-log-repeat nil
