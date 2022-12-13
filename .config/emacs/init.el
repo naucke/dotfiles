@@ -27,7 +27,8 @@
  org-agenda-files '("~/Documents/orgzly")
  org-agenda-file-regexp "\\`.*todo\\.org\\'"
  org-agenda-show-future-repeats 'next
- org-agenda-todo-ignore-scheduled 'future
+ org-agenda-start-on-weekday nil
+ org-agenda-todo-ignore-scheduled 'all
  org-enforce-todo-dependencies t
  org-log-repeat nil
  org-tags-column 0
