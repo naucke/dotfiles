@@ -29,6 +29,7 @@
  org-agenda-show-future-repeats 'next
  org-agenda-start-on-weekday nil
  org-agenda-todo-ignore-scheduled 'all
+ org-agenda-todo-ignore-deadlines 'all
  org-enforce-todo-dependencies t
  org-log-repeat nil
  org-tags-column 0
