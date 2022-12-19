@@ -16,6 +16,7 @@
 ; trying to keep it at least a bit minimalistic
 
 ;;; Code:
+(server-start)
 ; Settings
 (setq
  backup-directory-alist '(("." . "~/.cache/emacs"))
@@ -38,6 +39,7 @@
  scroll-step 1
  visible-bell t
  vc-follow-symlinks t
+ LilyPond-pdf-command "emacsclient"
 )
 (add-hook 'compilation-filter-hook 'ansi-color-compilation-filter)
 (put 'magit-clean 'disabled nil)
