@@ -8,7 +8,7 @@
  '(auth-source-save-behavior nil)
  '(package-selected-packages
    '(; Languages
-     auctex elpy flymake-shellcheck go-mode lean-mode rust-mode yaml-mode
+     auctex elpy flymake-shellcheck go-mode graphviz-dot-mode lean-mode rust-mode yaml-mode
      ; Workflow
      evil flycheck hl-todo lsp-mode magit org-chef pdf-tools ranger vterm)))
 
@@ -23,6 +23,7 @@
  compilation-scroll-output t
  display-line-numbers-type 'relative
  evil-want-C-i-jump nil
+ graphviz-dot-preview-extension "pdf"
  initial-major-mode 'text-mode
  mouse-yank-at-point t
  org-agenda-files '("~/Documents/orgzly")
