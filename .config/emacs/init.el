@@ -43,6 +43,7 @@
  LilyPond-pdf-command "emacsclient"
 )
 (add-hook 'compilation-filter-hook 'ansi-color-compilation-filter)
+(global-set-key (kbd "C-c a") #'org-agenda)
 (put 'magit-clean 'disabled nil)
 
 ; Modes
