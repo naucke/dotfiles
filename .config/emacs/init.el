@@ -109,7 +109,8 @@
   (add-to-list 'same-window-buffer-names b))
 (dolist (r '(
              "magit: .+"
-             ".+\.pdf"
+             ".+\\.pdf"
+             ".+\\.el\\(\\.gz\\)?"
 	    ))
   (add-to-list 'same-window-regexps r))
 
