@@ -101,10 +101,10 @@
   (add-hook m (lambda () (display-line-numbers-mode 0))))
 (dolist (b '(
              "*compilation*"
-             "*Help*"
              "*xref*"
+             "*Help*"
+             "*Lean Goal*"
              "*Python*"
-             "*Geiser Racket REPL*"
 	    ))
   (add-to-list 'same-window-buffer-names b))
 (dolist (r '(
