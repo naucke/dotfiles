@@ -132,7 +132,7 @@
 ; No tabs
 (add-hook 'rust-mode-hook (lambda () (setq indent-tabs-mode nil)))
 
-; AucTeX
+; PDF
 (pdf-tools-install)
 (setq TeX-view-program-selection '((output-pdf "PDF Tools")))
 (add-hook 'TeX-after-compilation-finished-functions 'TeX-revert-document-buffer)
@@ -142,6 +142,9 @@
              turn-on-reftex
 	    ))
   (add-hook 'LaTeX-mode-hook f))
+
+(load "~/.config/emacs/snippets/ol-textedit")
+(require 'ol-textedit)
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
