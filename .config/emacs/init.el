@@ -10,7 +10,7 @@
    '(; Languages
      auctex elpy flymake-shellcheck go-mode graphviz-dot-mode lean-mode rust-mode yaml-mode
      ; Workflow
-     evil flycheck hl-todo lsp-mode magit org-chef pdf-tools ranger vterm)))
+     evil flycheck helm hl-todo lsp-mode magit org-chef pdf-tools ranger vterm)))
 
 ;;; Commentary:
 ; trying to keep it at least a bit minimalistic
@@ -43,6 +43,7 @@
  LilyPond-pdf-command "emacsclient"
 )
 (add-hook 'compilation-filter-hook 'ansi-color-compilation-filter)
+(global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key (kbd "C-c a") #'org-agenda)
 (put 'magit-clean 'disabled nil)
 
@@ -54,6 +55,7 @@
 (global-flycheck-mode)
 (global-hl-todo-mode)
 (global-visual-line-mode)
+(helm-mode)
 (icomplete-mode)
 (ranger-override-dired-mode)
 (savehist-mode)
