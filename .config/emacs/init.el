@@ -33,6 +33,7 @@
  org-agenda-todo-ignore-scheduled 'all
  org-agenda-todo-ignore-deadlines 'all
  org-enforce-todo-dependencies t
+ org-latex-preview-ltxpng-directory "~/.cache/emacs/ltximg"
  org-log-repeat nil
  org-tags-column 0
  scroll-conservatively 30
@@ -45,6 +46,7 @@
 (add-hook 'compilation-filter-hook 'ansi-color-compilation-filter)
 (global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key (kbd "C-c a") #'org-agenda)
+(add-hook 'org-mode-hook (lambda () (plist-put org-format-latex-options :scale 2)))
 (put 'magit-clean 'disabled nil)
 
 ; Modes
