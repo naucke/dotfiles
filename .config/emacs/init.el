@@ -10,7 +10,7 @@
    '(; Languages
      auctex elpy flymake-shellcheck go-mode graphviz-dot-mode lean-mode rust-mode yaml-mode
      ; Workflow
-     evil flycheck helm hl-todo lsp-mode magit org-chef pdf-tools ranger vterm)))
+     evil flycheck helm hl-todo lsp-mode magit org-chef org-drill pdf-tools ranger vterm)))
 
 ;;; Commentary:
 ; trying to keep it at least a bit minimalistic
