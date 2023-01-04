@@ -95,7 +95,6 @@
              eshell-mode-hook
              gdb-mode-hook
              inferior-python-mode-hook
-             jdb-mode-hook
              org-agenda-mode-hook
              pdf-view-mode-hook
              TeX-output-mode-hook
@@ -117,7 +116,7 @@
             ))
   (add-to-list 'same-window-regexps r))
 
-; LSP launchers
+; LSP & language launchers
 (dolist (m '(
              c-mode-hook
              c++-mode-hook
