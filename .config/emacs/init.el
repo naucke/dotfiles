@@ -70,9 +70,9 @@
 
 ; Styling (dto. emacs-nox)
 (dolist (p '(
-	     (font . "IBM Plex Mono-10")
-	     (fullscreen . maximized)
-	    ))
+             (font . "IBM Plex Mono-10")
+             (fullscreen . maximized)
+            ))
   (add-to-list 'default-frame-alist p))
       
 (load-theme 'wombat)
@@ -80,14 +80,15 @@
 
 ; Evil, line number, and window exclusions
 (dolist (m '(
-	     buffer-menu-mode
-	     compilation-mode
+             buffer-menu-mode
+             compilation-mode
              image-mode
              image-dired-thumbnail-mode
              Info-mode
              TeX-output-mode
              xref--xref-buffer-mode
-	    ))
+             vterm-mode
+            ))
   (evil-set-initial-state m 'emacs))
 (dolist (m '(
              compilation-mode-hook
@@ -99,7 +100,7 @@
              pdf-view-mode-hook
              TeX-output-mode-hook
              vterm-mode-hook
-	     ))
+             ))
   (add-hook m (lambda () (display-line-numbers-mode 0))))
 (dolist (b '(
              "*compilation*"
@@ -107,13 +108,13 @@
              "*Help*"
              "*Lean Goal*"
              "*Python*"
-	    ))
+            ))
   (add-to-list 'same-window-buffer-names b))
 (dolist (r '(
              "magit: .+"
              ".+\\.pdf"
              ".+\\.el\\(\\.gz\\)?"
-	    ))
+            ))
   (add-to-list 'same-window-regexps r))
 
 ; LSP launchers
@@ -125,7 +126,7 @@
              perl-mode-hook
              python-mode-hook
              sh-mode-hook
-	     ))
+             ))
   (add-hook m 'lsp-deferred))
 (add-hook 'lsp-mode-hook (lambda () (define-key lsp-mode-map (kbd "M-o") lsp-command-map)))
 (add-hook 'lean-mode-hook (lambda () (set-input-method 'Lean)))
@@ -142,7 +143,7 @@
 (dolist (f '(
              (lambda () (push '("latexmk" "latexmk" TeX-run-TeX nil t) TeX-command-list))
              turn-on-reftex
-	    ))
+            ))
   (add-hook 'LaTeX-mode-hook f))
 
 (load "~/.config/emacs/snippets/ol-textedit")
