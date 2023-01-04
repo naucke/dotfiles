@@ -103,6 +103,7 @@
   (add-hook m (lambda () (display-line-numbers-mode 0))))
 (dolist (b '(
              "*compilation*"
+             "*grep*"
              "*xref*"
              "*Help*"
              "*Lean Goal*"
