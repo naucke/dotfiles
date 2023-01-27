@@ -1,4 +1,5 @@
 ;;; packages --- Summary
+(require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
