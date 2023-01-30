@@ -90,7 +90,7 @@ for_window [instance="davmail.DavGateway"] move container to workspace number 10
 exec swayidle timeout 600 lock
 
 exec gammastep
-exec joystickwake
+exec wljoywake
 exec mako
 exec ncmpcpp_coverd
 exec org.davmail.DavMail
