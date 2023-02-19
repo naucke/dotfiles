@@ -128,6 +128,7 @@
              c-mode-hook
              c++-mode-hook
              go-mode-hook
+             haskell-mode-hook
              rust-mode-hook
              perl-mode-hook
              python-mode-hook
