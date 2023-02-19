@@ -18,6 +18,7 @@
 
 ;;; Code:
 (server-start)
+(load-library "lilypond-mode")
 ; Settings
 (setq
  backup-directory-alist '(("." . "~/.cache/emacs"))
