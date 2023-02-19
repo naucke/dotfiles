@@ -86,6 +86,7 @@
 ; Evil, line number, and window exclusions
 (dolist (m '(
              buffer-menu-mode
+             calc-mode
              compilation-mode
              image-mode
              image-dired-thumbnail-mode
