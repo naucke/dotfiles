@@ -89,7 +89,6 @@ client.focused "#000000" $blue "#ffffff"
 input * xkb_numlock enabled
 
 for_window [instance="davmail-DavGateway"] move container to workspace number 10
-for_window [instance="org.cryptomator.launcher.Cryptomator\$MainApp"] move container to workspace number 10
 
 exec swayidle -w timeout 600 lock before-sleep lock
 
@@ -99,6 +98,6 @@ exec mako
 exec ncmpcpp_coverd
 exec org.davmail.DavMail
 exec com.nextcloud.desktopclient.nextcloud
-exec org.cryptomator.Cryptomator
+exec launch-cryptomator
 
 exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
