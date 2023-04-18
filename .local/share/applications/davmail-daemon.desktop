@@ -1,0 +1,4 @@
+[Desktop Entry]
+Type=Application
+Name=davmail-daemon
+Exec=org.davmail.DavMail -server /home/jakob/.config/davmail.properties
