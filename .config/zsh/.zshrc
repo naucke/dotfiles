@@ -1,5 +1,8 @@
+# Set ZDOTDIR="$HOME/.config/zsh"
+[ -z $THREADS ] && source "$HOME/.config/environment.d/env.conf"
+
 # Oh My Zsh
-export ZSH="$HOME/.oh-my-zsh"
+export ZSH="$XDG_DATA_HOME/oh-my-zsh"
 DISABLE_AUTO_UPDATE=true
 ENABLE_CORRECTION=true
 COMPLETION_WAITING_DOTS=true
@@ -28,14 +31,14 @@ zstyle :bracketed-paste-magic paste-init pasteinit
 zstyle :bracketed-paste-magic paste-finish pastefinish
 
 PS1="%F{cyan}%(?..%? )%F{cyan}%B░▒▓█%F{white}%K{cyan}%n@%m%F{cyan}%K{txtrst}█▓▒░ %F{cyan}%B%~ %% "
-[ -z $GOPATH ] && source "$HOME/.config/environment.d/env.conf"
 
 # Short aliases
-alias j="joplin"
+alias h="htop"
 alias l="ls -l --human-readable --all"
 alias n="ncmpcpp"
 alias r="ranger"
 alias v="vim"
+alias y="yay"
 
 # Swapping aliases
 alias normalcaps="swaymsg input '*' xkb_options escape:escape"
