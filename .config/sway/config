@@ -6,7 +6,7 @@ set $down j
 set $up k
 set $right l
 
-set $term alacritty
+set $term kitty
 set $menu bemenu-run -i --fn "IBM Plex Sans" --tf $blue --hf $blue
 
 include /etc/sway/displays
