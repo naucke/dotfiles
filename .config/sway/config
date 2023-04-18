@@ -84,6 +84,7 @@ bar {
 
 font pango:IBM Plex Sans 10
 workspace 1 output HDMI-A-3
+workspace 1 output DP-4
 client.focused "#000000" $blue "#ffffff"
 input * xkb_numlock enabled
 
