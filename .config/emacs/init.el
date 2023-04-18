@@ -86,6 +86,7 @@
              buffer-menu-mode
              calc-mode
              compilation-mode
+             eshell-mode
              image-mode
              image-dired-thumbnail-mode
              Info-mode
