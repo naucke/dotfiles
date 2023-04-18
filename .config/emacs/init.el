@@ -130,7 +130,6 @@
              html-mode-hook
              js-mode-hook
              rust-mode-hook
-             perl-mode-hook
              python-mode-hook
              sh-mode-hook
              ))
