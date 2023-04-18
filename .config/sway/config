@@ -89,7 +89,7 @@ input * xkb_numlock enabled
 
 for_window [instance="davmail.DavGateway"] move container to workspace number 10
 
-exec swayidle timeout 600 lock
+exec swayidle -w timeout 600 lock before-sleep lock
 
 exec gammastep
 exec wljoywake
