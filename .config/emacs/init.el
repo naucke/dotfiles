@@ -61,7 +61,6 @@
 (global-visual-line-mode)
 (helm-mode)
 (icomplete-mode)
-(ranger-override-dired-mode)
 (savehist-mode)
 (show-paren-mode)
 (tab-bar-mode)
