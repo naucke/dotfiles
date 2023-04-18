@@ -43,18 +43,21 @@ def insert_cover(cover):
     cover_width, cover_height = cover.size
     frame_ratio = frame_width / frame_height
     cover_ratio = cover_width / cover_height
-    scalar = frame_height / cover_height  # pillarboxed
+    scalar = frame_height / cover_height  # letterboxed
     bg_scalar = frame_width / cover_width  # zoom for background blur
-    start = (int((frame_ratio - cover_ratio) / 2 * frame_height), 0)
-    if frame_ratio < cover_ratio:  # letterboxed
+    blurred_start = (0,
+                     int((1 / frame_ratio - 1 / cover_ratio) / 2 *
+                         frame_width))
+    scaled_start = (int((frame_ratio - cover_ratio) / 2 * frame_height), 0)
+    if cover_ratio > frame_ratio:  # pillarboxed
         scalar, bg_scalar = bg_scalar, scalar
-        start = (0, int((1 / frame_ratio - 1 / cover_ratio) / 2 * frame_width))
+        blurred_start, scaled_start = scaled_start, blurred_start
     with PIL.Image.new("RGB", (frame_width, frame_height)) as desktop:
         scaled = PIL.ImageOps.scale(cover, scalar)
         background = PIL.ImageOps.scale(cover, bg_scalar)
         blurred = background.filter(PIL.ImageFilter.GaussianBlur(10))
-        desktop.paste(blurred)
-        desktop.paste(scaled, box=start)
+        desktop.paste(blurred, box=blurred_start)
+        desktop.paste(scaled, box=scaled_start)
         desktop.save(tmp_desktop, compress_level=0)
 
 
