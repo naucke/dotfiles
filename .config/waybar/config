@@ -36,7 +36,7 @@
 		},
 	},
 	{
-		"output": "HDMI-A-3",
+		"output": "HDMI-A-2",
 		"modules-left": ["sway/workspaces", "sway/mode", "idle_inhibitor", "pulseaudio"],
 		"modules-center": ["sway/window"],
 		"modules-right": ["network#up", "network#down", "network#wlan", "cpu", "temperature", "memory", "clock#date", "clock#time", "tray"],

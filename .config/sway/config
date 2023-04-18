@@ -83,6 +83,7 @@ bar {
 }
 
 font pango:IBM Plex Sans 10
+workspace 1 output HDMI-A-3
 client.focused "#000000" $blue "#ffffff"
 
 for_window [instance="davmail.DavGateway"] move container to workspace number 10
