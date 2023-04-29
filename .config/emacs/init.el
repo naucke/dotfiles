@@ -37,6 +37,7 @@
  org-agenda-todo-ignore-scheduled 'all
  org-agenda-todo-ignore-deadlines 'all
  org-enforce-todo-dependencies t
+ org-extend-today-until 2
  org-latex-preview-ltxpng-directory "~/.cache/emacs/ltximg"
  org-log-repeat nil
  org-tags-column 0
