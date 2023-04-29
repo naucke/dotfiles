@@ -28,6 +28,7 @@
  echo-keystrokes .1
  graphviz-dot-preview-extension "pdf"
  initial-major-mode 'text-mode
+ markdown-command '("pandoc" "--from=markdown" "--to=html5")
  mouse-yank-at-point t
  org-agenda-files '("~/Documents/orgzly")
  org-agenda-show-future-repeats 'next
