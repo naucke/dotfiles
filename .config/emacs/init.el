@@ -25,6 +25,7 @@
  compilation-scroll-output t
  display-line-numbers-type 'relative
  evil-want-C-i-jump nil
+ echo-keystrokes .1
  graphviz-dot-preview-extension "pdf"
  initial-major-mode 'text-mode
  mouse-yank-at-point t
