@@ -88,15 +88,13 @@ workspace 1 output DP-4
 client.focused "#000000" $blue "#ffffff"
 input * xkb_numlock enabled
 
-for_window [instance="davmail-DavGateway"] move container to workspace number 10
-
 exec swayidle -w timeout 600 lock before-sleep lock
 
 exec gammastep
 exec wljoywake
 exec mako
 exec ncmpcpp_coverd
-exec org.davmail.DavMail
+exec org.davmail.DavMail -server /home/jakob/.config/davmail.properties
 exec com.nextcloud.desktopclient.nextcloud
 exec launch-cryptomator
 
