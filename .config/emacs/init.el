@@ -105,6 +105,7 @@
              inferior-python-mode-hook
              org-agenda-mode-hook
              pdf-view-mode-hook
+             ranger-mode-hook
              TeX-output-mode-hook
              vterm-mode-hook
              ))
