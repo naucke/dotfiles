@@ -9,7 +9,7 @@
  '(auth-source-save-behavior nil)
  '(package-selected-packages
    '(; Languages
-     auctex elpy flymake-shellcheck go-mode graphviz-dot-mode lean-mode rust-mode scala-mode yaml-mode
+     auctex elpy flymake-shellcheck go-mode graphviz-dot-mode lean-mode lsp-metals rust-mode scala-mode yaml-mode
      ; Workflow
      evil flycheck helm hl-todo lsp-mode magit org-chef org-drill pdf-tools ranger vterm)))
 
