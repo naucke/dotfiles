@@ -26,12 +26,12 @@
 		},
 		"disk#ssd": {
 			 "path": "/",
-			 "format": "{percentage_used}% 兩",
+			 "format": "{percentage_used}% 󰘚",
 			 "interval": 5
 		},
 		"disk#luks": {
 			 "path": "/mnt/luks",
-			 "format": "{percentage_used}% ",
+			 "format": "{percentage_used}% ",
 			 "interval": 5
 		},
 	},
