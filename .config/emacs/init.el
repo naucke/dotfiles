@@ -8,10 +8,16 @@
  ;; If there is more than one, they won't work right.
  '(auth-source-save-behavior nil)
  '(package-selected-packages
-   '(; Languages
-     auctex elpy dockerfile-mode flymake-shellcheck go-mode graphviz-dot-mode lean-mode lsp-metals rust-mode scala-mode yaml-mode
-     ; Workflow
-     evil flycheck helm hl-todo lsp-mode magit org-chef org-drill pdf-tools ranger vterm)))
+   '(; Imperative languages
+     elpy go-mode flymake-shellcheck rust-mode
+     ; Declarative languages
+     haskell-mode lean-mode lsp-metals scala-mode
+     ; Markup languages
+     auctex dockerfile-mode graphviz-dot-mode yaml-mode
+     ; Org
+     org-chef org-drill org-roam
+     ; Non-org workflow
+     evil flycheck helm hl-todo lsp-mode magit pdf-tools ranger vterm)))
 
 ;;; Commentary:
 ; trying to keep it at least a bit minimalistic
@@ -40,6 +46,7 @@
  org-extend-today-until 2
  org-latex-preview-ltxpng-directory "~/.cache/emacs/ltximg"
  org-log-repeat nil
+ org-roam-directory (file-truename "~/Nextcloud/roam")
  org-tags-column 0
  scroll-conservatively 30
  scroll-margin 4
@@ -64,6 +71,7 @@
 (global-visual-line-mode)
 (helm-mode)
 (icomplete-mode)
+(org-roam-db-autosync-mode)
 (savehist-mode)
 (show-paren-mode)
 (tab-bar-mode)
