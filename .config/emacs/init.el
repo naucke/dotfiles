@@ -53,6 +53,7 @@
  scroll-step 1
  visible-bell t
  vc-follow-symlinks t
+ warning-minimum-level :emergency
  LilyPond-pdf-command "emacsclient"
 )
 (add-hook 'compilation-filter-hook 'ansi-color-compilation-filter)
