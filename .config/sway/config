@@ -14,6 +14,8 @@ include /etc/sway/displays
 input * {
     xkb_layout eu
     xkb_options caps:swapescape
+    xkb_numlock enabled
+    accel_profile "flat"
 }
 
 bindsym $mod+Return exec $term
@@ -86,7 +88,6 @@ font pango:IBM Plex Sans 10
 workspace 1 output HDMI-A-3
 workspace 1 output DP-4
 client.focused "#000000" $blue "#ffffff"
-input * xkb_numlock enabled
 
 exec swayidle -w timeout 600 lock before-sleep lock
 
