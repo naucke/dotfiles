@@ -13,7 +13,7 @@
    '(; Imperative languages
      elpy go-mode flymake-shellcheck rust-mode
      ; Declarative languages
-     haskell-mode lean-mode lsp-metals scala-mode
+     haskell-mode lean-mode lsp-haskell lsp-metals scala-mode
      ; Markup languages
      auctex dockerfile-mode graphviz-dot-mode yaml-mode
      ; Org
