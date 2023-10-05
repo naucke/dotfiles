@@ -19,7 +19,7 @@
      ; Org
      org-chef org-drill org-roam
      ; Non-org workflow
-     evil flycheck helm hl-todo lsp-mode magit pdf-tools ranger vterm)))
+     dracula-theme evil flycheck helm hl-todo lsp-mode magit pdf-tools ranger vterm)))
 
 ;;; Commentary:
 ; trying to keep it at least a bit minimalistic
@@ -44,7 +44,7 @@
  org-agenda-start-on-weekday nil
  org-agenda-todo-ignore-scheduled 'all
  org-agenda-todo-ignore-deadlines 'all
- org-cite-global-bibliography '("~/Nexxtcloud/roam/roam.bib")
+ org-cite-global-bibliography '("~/Nextcloud/roam/roam.bib")
  org-confirm-babel-evaluate nil
  org-enforce-todo-dependencies t
  org-extend-today-until 2
