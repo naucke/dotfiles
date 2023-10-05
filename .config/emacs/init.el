@@ -7,6 +7,8 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(auth-source-save-behavior nil)
+ '(custom-safe-themes
+   '("257de69e8cc7ffaf40ed1ba4abbd8d4cb1db6526a3557a9526f321306b279355" default))
  '(package-selected-packages
    '(; Imperative languages
      elpy go-mode flymake-shellcheck rust-mode
@@ -90,7 +92,7 @@
             ))
   (add-to-list 'default-frame-alist p))
       
-(load-theme 'wombat)
+(load-theme 'dracula)
 (set-cursor-color "#ffffff")
 
 ; Evil, line number, and window exclusions
@@ -154,8 +156,9 @@
 (add-hook 'lean-mode-hook (lambda () (set-input-method 'Lean)))
 (add-hook 'python-mode-hook 'elpy-enable)
 
-; No tabs
+; Whitespace
 (add-hook 'rust-mode-hook (lambda () (setq indent-tabs-mode nil)))
+(add-hook 'org-agenda-mode-hook (lambda () (visual-line-mode -1) (setq truncate-lines 1)))
 
 ; PDF
 (pdf-tools-install)
