@@ -44,11 +44,14 @@
  org-agenda-start-on-weekday nil
  org-agenda-todo-ignore-scheduled 'all
  org-agenda-todo-ignore-deadlines 'all
+ org-cite-global-bibliography '("~/Nexxtcloud/roam/roam.bib")
+ org-confirm-babel-evaluate nil
  org-enforce-todo-dependencies t
  org-extend-today-until 2
  org-latex-preview-ltxpng-directory "~/.cache/emacs/ltximg"
  org-log-repeat nil
  org-roam-directory (file-truename "~/Nextcloud/roam")
+ org-src-fontify-natively t
  org-tags-column 0
  scroll-conservatively 30
  scroll-margin 4
