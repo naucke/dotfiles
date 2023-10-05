@@ -158,6 +158,8 @@
 (add-hook 'edebug-mode-hook 'evil-normalize-keymaps)
 (add-hook 'lean-mode-hook (lambda () (set-input-method 'Lean)))
 (add-hook 'python-mode-hook 'elpy-enable)
+(load-file (let ((coding-system-for-read 'utf-8))
+                (shell-command-to-string "agda-mode locate")))
 
 ; Whitespace
 (add-hook 'rust-mode-hook (lambda () (setq indent-tabs-mode nil)))
