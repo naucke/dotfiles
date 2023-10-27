@@ -165,8 +165,8 @@
 
 ; Whitespace
 (add-hook 'rust-mode-hook (lambda () (setq indent-tabs-mode nil)))
-(add-hook 'cc-mode-hook (lambda () (setq-default indent-tabs-mode nil
-                                                 c-basic-offset 4)))
+(add-hook 'c++-mode-hook (lambda () (setq-default indent-tabs-mode nil)))
+(add-hook 'c++-mode-hook (lambda () (setq c-basic-offset 4)))
 (add-hook 'org-agenda-mode-hook (lambda () (visual-line-mode -1) (setq truncate-lines 1)))
 
 ; PDF
