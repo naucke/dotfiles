@@ -119,6 +119,7 @@
              gdb-mode-hook
              inferior-python-mode-hook
              org-agenda-mode-hook
+             pdb-mode-hook
              pdf-view-mode-hook
              ranger-mode-hook
              TeX-output-mode-hook
