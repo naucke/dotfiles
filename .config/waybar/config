@@ -1,28 +1,17 @@
 [
 	{
-		"modules-left": ["sway/workspaces", "sway/mode", "idle_inhibitor", "pulseaudio", "mpd"],
+		"modules-left": ["sway/workspaces", "sway/mode", "idle_inhibitor", "pulseaudio", "custom/waybar-mpris"],
 		"modules-center": ["sway/window"],
 		"modules-right": ["network#up", "network#down", "network#wlan", "cpu", "temperature", "memory", "disk#ssd", "disk#luks", "clock#date", "clock#time", "tray"],
 		"include": ["/etc/waybar/displays", "$XDG_CONFIG_HOME/waybar/common"],
-
-		"mpd": {
-			"server": "/home/jakob/.config/mpd/socket",
-			"format": "{stateIcon}{randomIcon} {title} – {album} – {} ({elapsedTime:%M:%S}/{totalTime:%M:%S})",
-			"format-stopped": "",
-			"format-disconnected": "",
-			"state-icons": {
-				"playing": "",
-				"paused": ""
-			},
-			"random-icons": {
-				"on": " "
-			},
-			"on-click": "mpc --host=/home/jakob/.config/mpd/socket toggle",
-			"on-click-right": "mpc --host=/home/jakob/.config/mpd/socket random",
-			"on-click-middle": "mpc --host=/home/jakob/.config/mpd/socket stop",
-			"on-scroll-up": "mpc --host=/home/jakob/.config/mpd/socket prev",
-			"on-scroll-down": "mpc --host=/home/jakob/.config/mpd/socket next",
-			"max-length": 80
+		"custom/waybar-mpris": {
+			"return-type": "json",
+			"exec": "waybar-mpris --position --autofocus --separator ' – ' --pause '\uf04c '",
+			"on-click": "waybar-mpris --send toggle",
+			"on-click-right": "waybar-mpris --send player-next",
+			"on-scroll-up": "waybar-mpris --send next",
+			"on-scroll-down": "waybar-mpris --send prev",
+			"escape": true,
 		},
 		"disk#ssd": {
 			 "path": "/",

@@ -2,7 +2,6 @@ lyrics_directory = /tmp/ncmpcpp_lyrics
 lyrics_fetchers = musixmatch, justsomelyrics, jahlyrics, plyrics, tekstowo, zeneszoveg, internet
 ncmpcpp_directory = ~/.config/ncmpcpp
 mpd_host = ~/.config/mpd/socket
-mpd_port = 6600
 mpd_music_dir = /mnt/luks/Music
 visualizer_data_source = /tmp/mpd.fifo
 visualizer_output_name = my_fifo
