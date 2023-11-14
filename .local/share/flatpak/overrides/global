@@ -4,7 +4,6 @@ sockets=wayland;
 [Environment]
 GTK_THEME=Arc-Dark
 XDG_CURRENT_DESKTOP=wayland-1
-MOZ_ENABLE_WAYLAND=1
 DRI_PRIME=0
 VK_ICD_FILENAMES=/usr/lib/x86_64-linux-gnu/GL/vulkan/icd.d/radeon_icd.x86_64.json:/usr/lib/i386-linux-gnu/GL/vulkan/icd.d/radeon_icd.i686.json
 MANGOHUD_CONFIG=gpu_temp,gpu_core_clock,vram,position=top-right
