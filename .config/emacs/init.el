@@ -7,6 +7,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(auth-source-save-behavior nil)
+ '(agda2-program-args '("--disable-backend" "--erasure"))
  '(custom-safe-themes
    '("257de69e8cc7ffaf40ed1ba4abbd8d4cb1db6526a3557a9526f321306b279355" default))
  '(package-selected-packages
@@ -161,7 +162,8 @@
 (setenv "WORKON_HOME" "/home/jakob/.conda/envs")
 (pyvenv-mode)
 (load-file (let ((coding-system-for-read 'utf-8))
-                (shell-command-to-string "agda-mode locate")))
+                (shell-command-to-string "agda2hs-mode locate")))
+;                 (shell-command-to-string "agda-mode locate")))
 
 ; Whitespace
 (add-hook 'rust-mode-hook (lambda () (setq indent-tabs-mode nil)))
