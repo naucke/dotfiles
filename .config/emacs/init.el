@@ -166,6 +166,9 @@
 
 ; Whitespace
 (add-hook 'rust-mode-hook (lambda () (setq indent-tabs-mode nil)))
+; These exist not a specific projects, but more as examples how to set things up
+(add-hook 'c-mode-hook (lambda () (setq tab-width 2
+                                        c-basic-offset 2)))
 (add-hook 'c++-mode-hook (lambda () (setq indent-tabs-mode nil
                                           c-basic-offset 4)))
 (add-hook 'org-agenda-mode-hook (lambda () (visual-line-mode -1) (setq truncate-lines 1)))
