@@ -160,8 +160,6 @@
 (add-hook 'edebug-mode-hook 'evil-normalize-keymaps)
 (add-hook 'lean-mode-hook (lambda () (set-input-method 'Lean)))
 (add-hook 'python-mode-hook 'elpy-enable)
-(setenv "WORKON_HOME" "/home/jakob/.conda/envs")
-(pyvenv-mode)
 (load-file (let ((coding-system-for-read 'utf-8))
                 (shell-command-to-string "agda2hs-mode locate")))
 ;                 (shell-command-to-string "agda-mode locate")))
