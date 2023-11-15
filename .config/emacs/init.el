@@ -18,7 +18,7 @@
      ; Markup languages
      auctex dockerfile-mode graphviz-dot-mode yaml-mode
      ; Org
-     org-chef org-drill org-roam
+     org-chef org-drill org-ref org-roam
      ; Non-org workflow
      dracula-theme evil flycheck helm hl-todo lsp-mode magit pdf-tools ranger vterm)))
 
@@ -31,6 +31,8 @@
 ; Settings
 (setq
  backup-directory-alist '(("." . "~/.cache/emacs"))
+ bibtex-completion-library-path '("~/Nextcloud/Studium/PDFs/")
+ bibtex-completion-pdf-open-function (lambda (fpath) (call-process "xdg-open" nil 0 nil fpath))
  compilation-scroll-output t
  display-line-numbers-type 'relative
  evil-want-C-i-jump nil
