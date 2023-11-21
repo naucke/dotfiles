@@ -6,10 +6,10 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(auth-source-save-behavior nil)
  '(agda2-program-args '("--disable-backend" "--erasure"))
+ '(auth-source-save-behavior nil)
  '(custom-safe-themes
-   '("257de69e8cc7ffaf40ed1ba4abbd8d4cb1db6526a3557a9526f321306b279355" default))
+   '("603a831e0f2e466480cdc633ba37a0b1ae3c3e9a4e90183833bc4def3421a961"))
  '(package-selected-packages
    '(; Imperative languages
      elpy go-mode flymake-shellcheck rust-mode
