@@ -54,6 +54,9 @@
  org-latex-preview-ltxpng-directory "~/.cache/emacs/ltximg"
  org-log-repeat nil
  org-roam-directory (file-truename "~/Nextcloud/roam")
+ org-roam-mode-sections (list #'org-roam-backlinks-section
+                              #'org-roam-reflinks-section
+                              #'org-roam-unlinked-references-section)
  org-src-fontify-natively t
  org-tags-column 0
  scroll-conservatively 30
@@ -143,6 +146,8 @@
              ".+\\.el\\(\\.gz\\)?"
             ))
   (add-to-list 'same-window-regexps r))
+; Org does it differently(tm)
+(setf (cdr (assoc 'file org-link-frame-setup)) 'find-file)
 
 ; LSP & language launchers
 (dolist (m '(
