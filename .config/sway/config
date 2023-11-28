@@ -100,3 +100,4 @@ exec com.nextcloud.desktopclient.nextcloud
 exec launch-cryptomator
 
 exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+exec dbus-update-activation-environment WAYLAND_DISPLAY
