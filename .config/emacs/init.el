@@ -112,6 +112,8 @@
              eshell-mode
              image-mode
              image-dired-thumbnail-mode
+             haskell-error-mode
+             haskell-interactive-mode
              Info-mode
              TeX-output-mode
              xref--xref-buffer-mode
