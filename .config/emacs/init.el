@@ -19,8 +19,10 @@
      auctex dockerfile-mode graphviz-dot-mode yaml-mode
      ; Org
      org-chef org-drill org-ref org-roam
+     ; Styling
+     auto-dark dracula-theme
      ; Non-org workflow
-     dracula-theme evil flycheck helm hl-todo lsp-mode magit pdf-tools ranger vterm)))
+     evil flycheck helm hl-todo lsp-mode magit pdf-tools ranger vterm)))
 
 ;;; Commentary:
 ; trying to keep it at least a bit minimalistic
@@ -30,6 +32,7 @@
 (load-library "lilypond-mode")
 ; Settings
 (setq
+ auto-dark-dark-theme 'dracula
  backup-directory-alist '(("." . "~/.cache/emacs"))
  bibtex-completion-library-path '("~/Nextcloud/Studium/PDFs/")
  bibtex-completion-pdf-open-function (lambda (fpath) (call-process "xdg-open" nil 0 nil fpath))
@@ -74,6 +77,7 @@
 (put 'magit-clean 'disabled nil)
 
 ; Modes
+(auto-dark-mode)
 (column-number-mode)
 (electric-pair-mode)
 (evil-mode)
@@ -101,7 +105,6 @@
             ))
   (add-to-list 'default-frame-alist p))
       
-(load-theme 'dracula)
 (set-cursor-color "#ffffff")
 
 ; Evil, line number, and window exclusions
