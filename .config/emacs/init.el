@@ -73,6 +73,9 @@
 (add-hook 'compilation-filter-hook 'ansi-color-compilation-filter)
 (global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key (kbd "C-c a") 'org-agenda)
+(global-set-key (kbd "C-c n f") 'org-roam-node-find)
+(global-set-key (kbd "C-c n i") 'org-roam-node-insert)
+(global-set-key (kbd "C-c n b") 'org-roam-buffer-toggle)
 (add-hook 'org-mode-hook (lambda () (plist-put org-format-latex-options :scale 2)))
 (put 'magit-clean 'disabled nil)
 
