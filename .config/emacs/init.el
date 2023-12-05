@@ -57,9 +57,9 @@
  org-latex-preview-ltxpng-directory "~/.cache/emacs/ltximg"
  org-log-repeat nil
  org-roam-directory (file-truename "~/Nextcloud/roam")
- org-roam-mode-sections (list #'org-roam-backlinks-section
-                              #'org-roam-reflinks-section
-                              #'org-roam-unlinked-references-section)
+ org-roam-mode-sections (list 'org-roam-backlinks-section
+                              'org-roam-reflinks-section
+                              'org-roam-unlinked-references-section)
  org-src-fontify-natively t
  org-tags-column 0
  scroll-conservatively 30
@@ -72,7 +72,7 @@
 )
 (add-hook 'compilation-filter-hook 'ansi-color-compilation-filter)
 (global-set-key (kbd "M-x") 'helm-M-x)
-(global-set-key (kbd "C-c a") #'org-agenda)
+(global-set-key (kbd "C-c a") 'org-agenda)
 (add-hook 'org-mode-hook (lambda () (plist-put org-format-latex-options :scale 2)))
 (put 'magit-clean 'disabled nil)
 
@@ -168,7 +168,7 @@
             ))
   (add-hook m 'lsp-deferred))
 (add-hook 'lsp-mode-hook (lambda () (define-key lsp-mode-map (kbd "M-o") lsp-command-map)))
-(add-hook 'lsp-mode-hook (lambda () (keymap-local-set "<tab-bar> <mouse-movement>" #'ignore)))
+(add-hook 'lsp-mode-hook (lambda () (keymap-local-set "<tab-bar> <mouse-movement>" 'ignore)))
 (add-hook 'edebug-mode-hook 'evil-normalize-keymaps)
 (add-hook 'lean-mode-hook (lambda () (set-input-method 'Lean)))
 (add-hook 'python-mode-hook 'elpy-enable)
