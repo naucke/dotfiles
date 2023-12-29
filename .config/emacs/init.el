@@ -44,6 +44,7 @@
  markdown-command '("pandoc" "--from=markdown" "--to=html5")
  mouse-yank-at-point t
  org-agenda-files '("~/Documents/orgzly")
+ org-agenda-file-regexp ".+todo\\.org"
  org-agenda-show-future-repeats 'next
  org-agenda-span 3
  org-agenda-start-on-weekday nil
