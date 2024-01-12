@@ -111,6 +111,7 @@
   (evil-set-initial-state m 'emacs))
 (dolist (m '(
              compilation-mode-hook
+             ediff-mode-hook
              eshell-mode-hook
              gdb-mode-hook
              inferior-python-mode-hook
@@ -125,6 +126,7 @@
 (dolist (b '(
              "*compilation*"
              "*grep*"
+             "*lsp-help*"
              "*xref*"
              "*Help*"
              "*Lean Goal*"
@@ -162,13 +164,14 @@
                  (shell-command-to-string "agda-mode locate")))
 
 ; Whitespace
+(add-hook 'emacs-lisp-mode-hook (lambda () (setq indent-tabs-mode nil)))
 (add-hook 'rust-mode-hook (lambda () (setq indent-tabs-mode nil)))
-; These exist not a specific projects, but more as examples how to set things up
+(add-hook 'org-agenda-mode-hook (lambda () (visual-line-mode -1) (setq truncate-lines 1)))
+; These exist not for specific projects, but more as examples how to set things up
 (add-hook 'c-mode-hook (lambda () (setq tab-width 2
                                         c-basic-offset 2)))
 (add-hook 'c++-mode-hook (lambda () (setq indent-tabs-mode nil
                                           c-basic-offset 4)))
-(add-hook 'org-agenda-mode-hook (lambda () (visual-line-mode -1) (setq truncate-lines 1)))
 
 ; PDF
 (pdf-tools-install)
