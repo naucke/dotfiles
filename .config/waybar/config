@@ -9,8 +9,8 @@
 			"exec": "waybar-mpris --position --autofocus --separator ' – ' --pause '\uf04c '",
 			"on-click": "waybar-mpris --send toggle",
 			"on-click-right": "waybar-mpris --send player-next",
-			"on-scroll-up": "waybar-mpris --send next",
-			"on-scroll-down": "waybar-mpris --send prev",
+			"on-scroll-up": "waybar-mpris --send prev",
+			"on-scroll-down": "waybar-mpris --send next",
 			"escape": true,
 		},
 		"disk#ssd": {
