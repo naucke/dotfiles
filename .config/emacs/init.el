@@ -1,27 +1,8 @@
 ;;; packages --- Summary
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(auth-source-save-behavior nil)
- '(custom-safe-themes
-   '("603a831e0f2e466480cdc633ba37a0b1ae3c3e9a4e90183833bc4def3421a961"))
- '(package-selected-packages
-   '(; Imperative languages
-     elpy go-mode flymake-shellcheck rust-mode
-     ; Declarative languages
-     haskell-mode lean-mode lsp-haskell lsp-metals scala-mode
-     ; Markup languages
-     auctex dockerfile-mode graphviz-dot-mode yaml-mode
-     ; Org
-     org-chef org-drill org-ref org-roam
-     ; Styling
-     auto-dark dracula-theme
-     ; Non-org workflow
-     evil flycheck helm hl-todo lsp-mode magit pdf-tools ranger vterm)))
+(setq custom-file (concat user-emacs-directory "custom.el"))
+(load custom-file)
 
 ;;; Commentary:
 ; trying to keep it at least a bit minimalistic
@@ -202,11 +183,5 @@
 (load "~/.config/emacs/snippets/ol-textedit")
 (require 'ol-textedit)
 
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
 (provide 'init)
 ;;; init.el ends here
