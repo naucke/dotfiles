@@ -22,6 +22,7 @@
  echo-keystrokes .1
  graphviz-dot-preview-extension "pdf"
  initial-major-mode 'text-mode
+ lsp-haskell-plugin-stan-global-on nil
  markdown-command '("pandoc" "--from=markdown" "--to=html5")
  mouse-yank-at-point t
  org-agenda-files '("~/Documents/orgzly")
