@@ -42,6 +42,7 @@
  org-roam-mode-sections (list 'org-roam-backlinks-section
                               'org-roam-reflinks-section
                               'org-roam-unlinked-references-section)
+ org-roam-node-display-template "${title} ${tags}"
  org-edit-src-content-indentation 0
  org-src-fontify-natively t
  org-tags-column 0
