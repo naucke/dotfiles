@@ -99,6 +99,7 @@
 (dolist (m '(
              buffer-menu-mode
              calc-mode
+             calc-trail-mode
              compilation-mode
              eshell-mode
              image-mode
