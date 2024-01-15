@@ -140,7 +140,7 @@
             ))
   (add-to-list 'same-window-buffer-names b))
 (dolist (r '(
-             "magit: .+"
+             "magit.*: .+"
              ".+\\.pdf"
              ".+\\.el\\(\\.gz\\)?"
             ))
