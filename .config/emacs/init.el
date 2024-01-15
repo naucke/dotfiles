@@ -42,6 +42,7 @@
  org-roam-mode-sections (list 'org-roam-backlinks-section
                               'org-roam-reflinks-section
                               'org-roam-unlinked-references-section)
+ org-edit-src-content-indentation 0
  org-src-fontify-natively t
  org-tags-column 0
  scroll-conservatively 30
@@ -172,6 +173,7 @@
                                         c-basic-offset 2)))
 (add-hook 'c++-mode-hook (lambda () (setq indent-tabs-mode nil
                                           c-basic-offset 4)))
+(add-hook 'haskell-mode-hook (lambda () (setq evil-auto-indent nil)))
 
 ; PDF
 (pdf-tools-install)
