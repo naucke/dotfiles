@@ -10,6 +10,7 @@
 ;;; Code:
 (server-start)
 (load-library "lilypond-mode")
+(pdf-tools-install)
 ; Settings
 (setq
  auto-dark-dark-theme 'dracula
@@ -53,6 +54,8 @@
  vc-follow-symlinks t
  warning-minimum-level :emergency
  LilyPond-pdf-command "emacsclient"
+ TeX-command-default "latexmk"
+ TeX-view-program-selection '((output-pdf "PDF Tools"))
 )
 (add-hook 'compilation-filter-hook 'ansi-color-compilation-filter)
 (global-set-key (kbd "M-x") 'helm-M-x)
@@ -181,12 +184,10 @@
 (add-hook 'haskell-mode-hook (lambda () (setq evil-auto-indent nil)))
 
 ; PDF
-(pdf-tools-install)
-(setq TeX-view-program-selection '((output-pdf "PDF Tools")))
 (add-hook 'TeX-after-compilation-finished-functions 'TeX-revert-document-buffer)
-(add-hook 'TeX-mode-hook (lambda () (setq TeX-command-default "latexmk")))
 (dolist (f '(
-             (lambda () (push '("latexmk" "latexmk" TeX-run-TeX nil t) TeX-command-list))
+             (lambda () (progn (push '("latexmk" "latexmk" TeX-run-TeX nil t) TeX-command-list)
+                               (push '("make from src/" "make -C .." TeX-run-TeX nil t) TeX-command-list)))
              turn-on-reftex
             ))
   (add-hook 'LaTeX-mode-hook f))
