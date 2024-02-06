@@ -30,3 +30,4 @@ x-scheme-handler/https=org.mozilla.firefox.desktop
 x-scheme-handler/about=org.mozilla.firefox.desktop
 x-scheme-handler/unknown=org.mozilla.firefox.desktop
 x-scheme-handler/ferdium=ferdium.desktop
+x-scheme-handler/ror2mm=r2modman.desktop
