@@ -54,7 +54,6 @@
  vc-follow-symlinks t
  warning-minimum-level :emergency
  LilyPond-pdf-command "emacsclient"
- TeX-command-default "latexmk"
  TeX-view-program-selection '((output-pdf "PDF Tools"))
 )
 (add-hook 'compilation-filter-hook 'ansi-color-compilation-filter)
@@ -186,8 +185,8 @@
 ; PDF
 (add-hook 'TeX-after-compilation-finished-functions 'TeX-revert-document-buffer)
 (dolist (f '(
-             (lambda () (progn (push '("latexmk" "latexmk" TeX-run-TeX nil t) TeX-command-list)
-                               (push '("make from src/" "make -C .." TeX-run-TeX nil t) TeX-command-list)))
+             (lambda () (progn (add-to-list 'TeX-command-list '("latexmk" "latexmk" TeX-run-TeX nil t))
+                               (setq TeX-command-default "latexmk")))
              turn-on-reftex
             ))
   (add-hook 'LaTeX-mode-hook f))
