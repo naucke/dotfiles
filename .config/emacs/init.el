@@ -52,7 +52,6 @@
  scroll-step 1
  visible-bell t
  vc-follow-symlinks t
- warning-minimum-level :emergency
  LilyPond-pdf-command "emacsclient"
  TeX-view-program-selection '((output-pdf "PDF Tools"))
 )
