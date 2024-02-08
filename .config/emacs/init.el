@@ -163,6 +163,8 @@
   (add-hook m 'lsp-deferred))
 (add-hook 'lsp-mode-hook (lambda () (define-key lsp-mode-map (kbd "M-o") lsp-command-map)))
 (add-hook 'agda2-mode-hook (lambda () (local-set-key (kbd "M-o g g") 'agda2-goto-definition-keyboard)))
+(add-hook 'bibtex-mode-hook (lambda () (progn (local-set-key (kbd "C-c C-o") 'org-ref-bibtex-hydra/org-ref-open-bibtex-pdf-and-exit)
+                                              (local-set-key (kbd "C-c C-d") 'doi-utils-async-download-pdf))))
 (add-hook 'lsp-mode-hook (lambda () (keymap-local-set "<tab-bar> <mouse-movement>" 'ignore)))
 (add-hook 'edebug-mode-hook 'evil-normalize-keymaps)
 (add-hook 'lean-mode-hook (lambda () (set-input-method 'Lean)))
