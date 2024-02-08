@@ -33,7 +33,6 @@
  org-agenda-start-on-weekday nil
  org-agenda-todo-ignore-scheduled 'all
  org-agenda-todo-ignore-deadlines 'all
- org-cite-global-bibliography '("~/Nextcloud/roam/roam.bib")
  org-confirm-babel-evaluate nil
  org-enforce-todo-dependencies t
  org-extend-today-until 2
