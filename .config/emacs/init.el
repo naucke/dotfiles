@@ -181,7 +181,19 @@
                                         c-basic-offset 2)))
 (add-hook 'c++-mode-hook (lambda () (setq indent-tabs-mode nil
                                           c-basic-offset 4)))
-(add-hook 'haskell-mode-hook (lambda () (setq evil-auto-indent nil)))
+
+(defun hly/evil-open-below (count)
+  "Open COUNT below, see https://github.com/haskell/haskell-mode/issues/1265."
+  (interactive "p")
+  (setq unread-command-events (listify-key-sequence (kbd "RET")))
+  (evil-append-line count))
+(defun hly/evil-open-above (count)
+  "Open COUNT above, see https://github.com/haskell/haskell-mode/issues/1265."
+  (interactive "p")
+  (forward-line -1)
+  (hly/evil-open-below count))
+(define-key evil-normal-state-map "o" 'hly/evil-open-below)
+(define-key evil-normal-state-map "O" 'hly/evil-open-above)
 
 ; PDF
 (add-hook 'TeX-after-compilation-finished-functions 'TeX-revert-document-buffer)
