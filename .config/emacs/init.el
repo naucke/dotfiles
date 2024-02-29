@@ -19,8 +19,8 @@
  bibtex-completion-pdf-open-function (lambda (fpath) (call-process "xdg-open" nil 0 nil fpath))
  compilation-scroll-output t
  display-line-numbers-type 'relative
- evil-want-C-i-jump nil
  echo-keystrokes .1
+ evil-want-C-i-jump nil
  graphviz-dot-preview-extension "pdf"
  initial-major-mode 'text-mode
  lsp-haskell-plugin-stan-global-on nil
@@ -141,6 +141,7 @@
   (add-to-list 'same-window-buffer-names b))
 (dolist (r '(
              "magit: .+"
+             ".+\\.bib"
              ".+\\.pdf"
              ".+\\.el\\(\\.gz\\)?"
             ))
