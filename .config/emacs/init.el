@@ -156,6 +156,7 @@
              haskell-mode-hook
              html-mode-hook
              js-mode-hook
+             TeX-mode-hook
              rust-mode-hook
              scala-mode-hook
              python-mode-hook
@@ -202,6 +203,7 @@
              (lambda () (progn (add-to-list 'TeX-command-list '("latexmk" "latexmk" TeX-run-TeX nil t))
                                (setq TeX-command-default "latexmk")))
              turn-on-reftex
+             flyspell-mode
             ))
   (add-hook 'LaTeX-mode-hook f))
 
