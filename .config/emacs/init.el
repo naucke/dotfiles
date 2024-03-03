@@ -61,6 +61,7 @@
 (global-set-key (kbd "C-c n i") 'org-roam-node-insert)
 (global-set-key (kbd "C-c n b") 'org-roam-buffer-toggle)
 (global-set-key (kbd "M-p") 'org-meta-return)
+(global-set-key (kbd "M-[") 'shell-command)
 (add-hook 'org-mode-hook (lambda () (plist-put org-format-latex-options :scale 2)))
 (put 'magit-clean 'disabled nil)
 
