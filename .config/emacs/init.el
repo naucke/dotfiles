@@ -26,7 +26,7 @@
  lsp-haskell-plugin-stan-global-on nil
  markdown-command '("pandoc" "--from=markdown" "--to=html5")
  mouse-yank-at-point t
- org-agenda-files '("~/Documents/orgzly")
+ org-agenda-files '("~/Documents/Nextcloud2/Orgzly")
  org-agenda-file-regexp ".+todo\\.org"
  org-agenda-show-future-repeats 'next
  org-agenda-span 3
