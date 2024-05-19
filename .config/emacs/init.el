@@ -63,6 +63,7 @@
 (global-set-key (kbd "C-c n b") 'org-roam-buffer-toggle)
 (global-set-key (kbd "M-p") 'org-meta-return)
 (global-set-key (kbd "M-[") 'shell-command)
+(global-set-key (kbd "M-]") 'async-shell-command)
 (add-hook 'org-mode-hook (lambda () (plist-put org-format-latex-options :scale 2)))
 (put 'magit-clean 'disabled nil)
 
@@ -168,6 +169,7 @@
 
 ; Whitespace
 (add-hook 'emacs-lisp-mode-hook (lambda () (setq indent-tabs-mode nil)))
+(add-hook 'lisp-data-mode-hook (lambda () (setq indent-tabs-mode nil)))
 (add-hook 'rust-mode-hook (lambda () (setq indent-tabs-mode nil)))
 (add-hook 'org-agenda-mode-hook (lambda () (visual-line-mode -1) (setq truncate-lines 1)))
 ; These exist not for specific projects, but more as examples how to set things up
@@ -186,8 +188,8 @@
   (interactive "p")
   (forward-line -1)
   (hly/evil-open-below count))
-(define-key evil-normal-state-map "o" 'hly/evil-open-below)
-(define-key evil-normal-state-map "O" 'hly/evil-open-above)
+(add-hook 'haskell-mode-hook (lambda () (progn (define-key evil-normal-state-map "o" 'hly/evil-open-below)
+                                               (define-key evil-normal-state-map "O" 'hly/evil-open-above))))
 
 ; PDF
 (add-hook 'TeX-after-compilation-finished-functions 'TeX-revert-document-buffer)
