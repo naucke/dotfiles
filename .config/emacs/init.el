@@ -203,6 +203,8 @@
 
 (load "~/.config/emacs/snippets/ol-textedit")
 (require 'ol-textedit)
+(load "~/.config/emacs/snippets/flyspell-envs")
+(require 'flyspell-envs)
 
 (provide 'init)
 ;;; init.el ends here
