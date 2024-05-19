@@ -18,6 +18,7 @@
  bibtex-completion-library-path '("~/Nextcloud/Studium/PDFs/")
  bibtex-completion-pdf-open-function (lambda (fpath) (call-process "xdg-open" nil 0 nil fpath))
  compilation-scroll-output t
+ display-buffer-alist '((".*" (display-buffer-reuse-window display-buffer-same-window) (reusable-frames . t)))
  display-line-numbers-type 'relative
  echo-keystrokes .1
  evil-want-C-i-jump nil
@@ -130,16 +131,6 @@
              vterm-mode-hook
              ))
   (add-hook m (lambda () (display-line-numbers-mode 0))))
-(dolist (b '(
-             "*compilation*"
-             "*grep*"
-             "*lsp-help*"
-             "*xref*"
-             "*Help*"
-             "*Lean Goal*"
-             "*Python*"
-            ))
-  (add-to-list 'same-window-buffer-names b))
 (dolist (r '(
              "magit: .+"
              ".+\\.bib"
