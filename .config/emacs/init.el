@@ -194,7 +194,7 @@
 ; PDF
 (add-hook 'TeX-after-compilation-finished-functions 'TeX-revert-document-buffer)
 (dolist (f '(
-             (lambda () (progn (add-to-list 'TeX-command-list '("latexmk" "latexmk" TeX-run-TeX nil t))
+             (lambda () (progn (add-to-list 'TeX-command-list '("latexmk" "latexmk %t" TeX-run-TeX nil t))
                                (setq TeX-command-default "latexmk")))
              turn-on-reftex
              flyspell-mode
