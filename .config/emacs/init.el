@@ -198,6 +198,7 @@
                                (setq TeX-command-default "latexmk")))
              turn-on-reftex
              flyspell-mode
+             TeX-source-correlate-mode
             ))
   (add-hook 'LaTeX-mode-hook f))
 
