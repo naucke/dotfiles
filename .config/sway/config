@@ -91,6 +91,7 @@ client.focused "#000000" $blue "#ffffff"
 
 exec swayidle -w timeout 600 lock before-sleep lock
 
+exec nm-applet
 exec gammastep
 exec wljoywake
 exec mako

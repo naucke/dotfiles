@@ -69,12 +69,6 @@
 		"format": "{bandwidthDownOctets} ",
 		"interval": 1
 	},
-	"network#wlan": {
-		"format-wifi": "{signalStrength}% 󰖩",
-		"format-disconnected": "󰖪",
-		"tooltip-format": "{ipaddr}@{} on {ifname}, {signaldBm} dBm, {frequency} MHz, gateway {gwaddr}",
-		"interval": 3
-	},
 	"cpu": {
 		"format": "{usage}% ",
 		"interval": 1
