@@ -1,2 +1,2 @@
 gsettings set org.gnome.desktop.interface color-scheme prefer-light
-kitty +kitten themes --reload-in=all "Bluloco Light"
+kitty +kitten themes --reload-in=all Gruvbox Light Hard
