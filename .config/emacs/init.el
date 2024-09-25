@@ -79,6 +79,8 @@
 (global-hl-todo-mode)
 (global-visual-line-mode)
 (helm-mode)
+(highlight-indentation-mode)
+(highlight-indentation-current-column-mode)
 (icomplete-mode)
 (org-roam-db-autosync-mode)
 (recentf-mode)
