@@ -10,7 +10,6 @@
 ;;; Code:
 (server-start)
 (load-library "lilypond-mode")
-(pdf-tools-install)
 ; Settings
 (setq
  auto-dark-dark-theme 'dracula
@@ -53,7 +52,6 @@
  visible-bell t
  vc-follow-symlinks t
  LilyPond-pdf-command "emacsclient"
- TeX-view-program-selection '((output-pdf "PDF Tools"))
 )
 (add-hook 'compilation-filter-hook 'ansi-color-compilation-filter)
 (global-set-key (kbd "M-x") 'helm-M-x)
