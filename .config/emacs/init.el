@@ -104,7 +104,7 @@
       
 (set-cursor-color "#ffffff")
 
-; Evil, line number, and window exclusions
+; Evil and line number exclusions
 (dolist (m '(
              buffer-menu-mode
              calc-mode
@@ -135,15 +135,10 @@
              vterm-mode-hook
              ))
   (add-hook m (lambda () (display-line-numbers-mode 0))))
-(dolist (r '(
-             "magit: .+"
-             ".+\\.bib"
-             ".+\\.pdf"
-             ".+\\.el\\(\\.gz\\)?"
-            ))
-  (add-to-list 'same-window-regexps r))
-; Org does it differently(tm)
+
+; Same window extras
 (setf (cdr (assoc 'file org-link-frame-setup)) 'find-file)
+; TODO find a solution for xref/rgrep, hopefully from https://github.com/FrostyX/current-window-only/issues/6
 
 ; LSP & language launchers
 (dolist (m '(
