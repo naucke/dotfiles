@@ -64,6 +64,7 @@
 (global-set-key (kbd "M-p") 'org-meta-return)
 (global-set-key (kbd "M-[") 'shell-command)
 (global-set-key (kbd "M-]") 'async-shell-command)
+(global-unset-key (kbd "C-x C-c"))
 (add-hook 'org-mode-hook (lambda () (plist-put org-format-latex-options :scale 2)))
 (put 'magit-clean 'disabled nil)
 
