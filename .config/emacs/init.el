@@ -33,6 +33,7 @@
  org-agenda-start-on-weekday nil
  org-agenda-todo-ignore-scheduled 'all
  org-agenda-todo-ignore-deadlines 'all
+ org-agenda-use-time-grid nil
  org-confirm-babel-evaluate nil
  org-enforce-todo-dependencies t
  org-extend-today-until 2
