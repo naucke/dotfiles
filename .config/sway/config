@@ -84,7 +84,7 @@ bar {
     swaybar_command waybar
 }
 
-font pango:IBM Plex Sans 10
+font pango:IBM Plex Sans 11
 workspace 1 output HDMI-A-3
 workspace 1 output DP-4
 client.focused "#000000" $blue "#ffffff"
