@@ -97,7 +97,7 @@
 
 ; Styling (dto. emacs-nox)
 (dolist (p '(
-             (font . "IBM Plex Mono-10")
+             (font . "IBM Plex Mono-12")
              (fullscreen . maximized)
             ))
   (add-to-list 'default-frame-alist p))
