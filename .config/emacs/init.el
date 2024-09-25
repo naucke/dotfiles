@@ -47,6 +47,7 @@
  org-edit-src-content-indentation 0
  org-src-fontify-natively t
  org-tags-column 0
+ recentf-max-saved-items nil
  scroll-conservatively 30
  scroll-margin 4
  scroll-step 1
