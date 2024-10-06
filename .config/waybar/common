@@ -1,6 +1,6 @@
 {
 	"sway/workspaces": {
-		"format": "{name}: {}",
+		"format": "{name}: {0}",
 		"format-icons": {
 			"default": "",
 			"focused": "",
