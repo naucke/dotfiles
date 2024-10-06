@@ -96,7 +96,6 @@ exec gammastep
 exec wljoywake
 exec mako
 exec ncmpcpp_coverd
-exec org.davmail.DavMail -server /home/jakob/.config/davmail.properties
 exec com.nextcloud.desktopclient.nextcloud
 exec launch-cryptomator
 
