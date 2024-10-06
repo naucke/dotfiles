@@ -62,6 +62,7 @@
 (global-set-key (kbd "C-c n i") 'org-roam-node-insert)
 (global-set-key (kbd "C-c n b") 'org-roam-buffer-toggle)
 (global-set-key (kbd "M-p") 'org-meta-return)
+(global-set-key (kbd "M-p") 'LaTeX-insert-item)
 (global-set-key (kbd "M-[") 'shell-command)
 (global-set-key (kbd "M-]") 'async-shell-command)
 (global-unset-key (kbd "C-x C-c"))
