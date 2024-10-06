@@ -1,5 +1,5 @@
 lyrics_directory = /tmp/ncmpcpp_lyrics
-lyrics_fetchers = musixmatch, justsomelyrics, jahlyrics, plyrics, tekstowo, zeneszoveg, internet
+lyrics_fetchers = justsomelyrics, jahlyrics, plyrics, tekstowo, zeneszoveg, internet
 ncmpcpp_directory = ~/.config/ncmpcpp
 mpd_host = ~/.config/mpd/socket
 mpd_music_dir = /mnt/luks/Music
