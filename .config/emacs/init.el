@@ -65,6 +65,7 @@
 (global-set-key (kbd "M-p") 'LaTeX-insert-item)
 (global-set-key (kbd "M-[") 'shell-command)
 (global-set-key (kbd "M-]") 'async-shell-command)
+(global-set-key (kbd "M-o n") 'flymake-goto-next-error)
 (global-unset-key (kbd "C-x C-c"))
 (add-hook 'org-mode-hook (lambda () (plist-put org-format-latex-options :scale 2)))
 (put 'magit-clean 'disabled nil)
@@ -195,9 +196,9 @@
 (dolist (f '((lambda () (progn (add-to-list 'TeX-command-list '("latexmk" "latexmk %t" TeX-run-TeX nil t))
                                (setq TeX-command-default "latexmk")))
              turn-on-reftex
+             flymake-mode
              flyspell-mode
              TeX-source-correlate-mode
-             latex-electric-env-pair-mode
             ))
   (add-hook 'LaTeX-mode-hook f))
 
