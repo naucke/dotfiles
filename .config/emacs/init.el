@@ -146,6 +146,7 @@
 (dolist (m '(
              c-mode-hook
              c++-mode-hook
+             go-mode-hook
              haskell-mode-hook
              html-mode-hook
              js-mode-hook
@@ -169,6 +170,7 @@
 
 ; Whitespace
 (add-hook 'emacs-lisp-mode-hook (lambda () (setq indent-tabs-mode nil)))
+(add-hook 'go-mode-hook (lambda () (setq tab-width 2)))
 (add-hook 'lisp-data-mode-hook (lambda () (setq indent-tabs-mode nil)))
 (add-hook 'rust-mode-hook (lambda () (setq indent-tabs-mode nil)))
 (add-hook 'org-agenda-mode-hook (lambda () (visual-line-mode -1) (setq truncate-lines 1)))
