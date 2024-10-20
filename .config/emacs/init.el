@@ -197,9 +197,10 @@
 (add-hook 'TeX-after-compilation-finished-functions 'TeX-revert-document-buffer)
 (dolist (f '((lambda () (progn (add-to-list 'TeX-command-list '("latexmk" "latexmk %t" TeX-run-TeX nil t))
                                (setq TeX-command-default "latexmk")))
-             turn-on-reftex
              flymake-mode
              flyspell-mode
+             latex-electric-env-pair-mode
+             turn-on-reftex
              TeX-source-correlate-mode
             ))
   (add-hook 'LaTeX-mode-hook f))
