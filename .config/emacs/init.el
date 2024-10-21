@@ -101,6 +101,7 @@
 (dolist (p '(
              (font . "IBM Plex Mono-12")
              (fullscreen . maximized)
+             (width . 80) (height . 24)
             ))
   (add-to-list 'default-frame-alist p))
       
