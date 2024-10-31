@@ -61,8 +61,6 @@
 (global-set-key (kbd "C-c n f") 'org-roam-node-find)
 (global-set-key (kbd "C-c n i") 'org-roam-node-insert)
 (global-set-key (kbd "C-c n b") 'org-roam-buffer-toggle)
-(global-set-key (kbd "M-p") 'org-meta-return)
-(global-set-key (kbd "M-p") 'LaTeX-insert-item)
 (global-set-key (kbd "M-[") 'shell-command)
 (global-set-key (kbd "M-]") 'async-shell-command)
 (global-set-key (kbd "M-o n") 'flymake-goto-next-error)
@@ -164,6 +162,7 @@
                                               (local-set-key (kbd "C-c C-d") 'doi-utils-async-download-pdf))))
 (add-hook 'lsp-mode-hook (lambda () (keymap-local-set "<tab-bar> <mouse-movement>" 'ignore)))
 (add-hook 'edebug-mode-hook 'evil-normalize-keymaps)
+(add-hook 'org-mode-hook (lambda () (local-set-key (kbd "M-p") 'org-meta-return)))
 (add-hook 'lean-mode-hook (lambda () (set-input-method 'Lean)))
 (add-hook 'python-mode-hook 'elpy-enable)
 (load-file (let ((coding-system-for-read 'utf-8))
@@ -197,6 +196,7 @@
 ; PDF
 (add-hook 'TeX-after-compilation-finished-functions 'TeX-revert-document-buffer)
 (dolist (f '((lambda () (progn (add-to-list 'TeX-command-list '("latexmk" "latexmk %t" TeX-run-TeX nil t))
+                               (local-set-key (kbd "M-p") 'LaTeX-insert-item)
                                (setq TeX-command-default "latexmk")))
              flymake-mode
              flyspell-mode
