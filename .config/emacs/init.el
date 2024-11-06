@@ -57,6 +57,7 @@
 )
 (add-hook 'compilation-filter-hook 'ansi-color-compilation-filter)
 (global-set-key (kbd "M-x") 'helm-M-x)
+(global-set-key (kbd "C-x C-f") 'helm-find-files)
 (global-set-key (kbd "C-c a") 'org-agenda)
 (global-set-key (kbd "C-c n f") 'org-roam-node-find)
 (global-set-key (kbd "C-c n i") 'org-roam-node-insert)
