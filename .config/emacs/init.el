@@ -194,11 +194,19 @@
 (add-hook 'haskell-mode-hook (lambda () (progn (define-key evil-normal-state-map "o" 'hly/evil-open-below)
                                                (define-key evil-normal-state-map "O" 'hly/evil-open-above))))
 
-; PDF
+(load "~/.config/emacs/snippets/ol-textedit")
+(require 'ol-textedit)
+(load "~/.config/emacs/snippets/flyspell-envs")
+(require 'flyspell-envs)
+(load "~/.config/emacs/snippets/dollar-electric")
+(require 'dollar-electric)
+
+; LaTeX
 (add-hook 'TeX-after-compilation-finished-functions 'TeX-revert-document-buffer)
 (dolist (f '((lambda () (progn (add-to-list 'TeX-command-list '("latexmk" "latexmk %t" TeX-run-TeX nil t))
                                (local-set-key (kbd "M-p") 'LaTeX-insert-item)
                                (setq TeX-command-default "latexmk")))
+             fix-electric-pair-paired-delimiters-in-tex-mode
              flymake-mode
              flyspell-mode
              latex-electric-env-pair-mode
@@ -206,11 +214,6 @@
              TeX-source-correlate-mode
             ))
   (add-hook 'LaTeX-mode-hook f))
-
-(load "~/.config/emacs/snippets/ol-textedit")
-(require 'ol-textedit)
-(load "~/.config/emacs/snippets/flyspell-envs")
-(require 'flyspell-envs)
 
 (provide 'init)
 ;;; init.el ends here
