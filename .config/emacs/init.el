@@ -22,6 +22,7 @@
  echo-keystrokes .1
  evil-want-C-i-jump nil
  graphviz-dot-preview-extension "pdf"
+ helm-ff-skip-boring-files t
  initial-major-mode 'text-mode
  lsp-haskell-plugin-stan-global-on nil
  markdown-command '("pandoc" "--from=markdown" "--to=html5")
