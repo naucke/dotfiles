@@ -1,7 +1,3 @@
-[Context]
-sockets=wayland;
-
 [Environment]
-XDG_CURRENT_DESKTOP=wayland-1
 MANGOHUD_CONFIG=gpu_temp,gpu_core_clock,vram,position=top-right
 MANGOHUD=1
