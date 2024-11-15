@@ -57,6 +57,10 @@
  LilyPond-pdf-command "emacsclient"
 )
 (add-hook 'compilation-filter-hook 'ansi-color-compilation-filter)
+(add-hook 'org-mode-hook (lambda () (plist-put org-format-latex-options :scale 2)))
+(dolist (f '(highlight-indentation-mode
+             highlight-indentation-current-column-mode))
+  (add-hook 'prog-mode-hook f))
 (global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
 (global-set-key (kbd "C-c a") 'org-agenda)
@@ -67,7 +71,6 @@
 (global-set-key (kbd "M-]") 'async-shell-command)
 (global-set-key (kbd "M-o n") 'flymake-goto-next-error)
 (global-unset-key (kbd "C-x C-c"))
-(add-hook 'org-mode-hook (lambda () (plist-put org-format-latex-options :scale 2)))
 (put 'magit-clean 'disabled nil)
 
 ; Modes
@@ -81,8 +84,6 @@
 (global-hl-todo-mode)
 (global-visual-line-mode)
 (helm-mode)
-(highlight-indentation-mode)
-(highlight-indentation-current-column-mode)
 (icomplete-mode)
 (org-roam-db-autosync-mode)
 (recentf-mode)
