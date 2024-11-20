@@ -194,7 +194,8 @@
   (forward-line -1)
   (hly/evil-open-below count))
 (add-hook 'haskell-mode-hook (lambda () (progn (define-key evil-normal-state-map "o" 'hly/evil-open-below)
-                                               (define-key evil-normal-state-map "O" 'hly/evil-open-above))))
+                                               (define-key evil-normal-state-map "O" 'hly/evil-open-above)
+                                               (setq lsp-rename-use-prepare nil))))
 
 (load "~/.config/emacs/snippets/ol-textedit")
 (require 'ol-textedit)
