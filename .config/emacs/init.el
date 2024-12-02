@@ -93,6 +93,9 @@
 (tab-bar-mode)
 (winner-mode)
 
+(customize-set-variable 'helm-boring-file-regexp-list
+  (append '("\\.bcf$" "\\.fls$" "\\.nav$" "\\.lol$" "\\.out$" "\\.ptb$" "\\.snm$" "\\.vrb$" "\\.run.xml$" "\\.synctex.gz$") helm-boring-file-regexp-list))
+
 ; Graphical mode fixes (does not apply to emacs-nox)
 (blink-cursor-mode -1)
 (tool-bar-mode -1)
