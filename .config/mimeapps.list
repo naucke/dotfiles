@@ -6,6 +6,7 @@ audio/flac=mpv.desktop
 audio/opus=mpv.desktop
 audio/ogg=mpv.desktop
 audio/mpeg=mpv.desktop
+audio/x-m4a=mpv.desktop
 audio/mpegapplication/octet-stream=mpv.desktop
 audio/x-aiff=mpv.desktop
 audio/x-wav=mpv.desktop
