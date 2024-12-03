@@ -154,6 +154,7 @@
              go-mode-hook
              haskell-mode-hook
              html-mode-hook
+             java-mode-hook
              js-mode-hook
              TeX-mode-hook
              rust-mode-hook
@@ -185,6 +186,8 @@
                                         c-basic-offset 2)))
 (add-hook 'c++-mode-hook (lambda () (setq indent-tabs-mode nil
                                           c-basic-offset 4)))
+(add-hook 'java-mode-hook (lambda () (setq indent-tabs-mode nil
+                                           tab-stop-list (number-sequence 4 200 4))))
 
 (defun hly/evil-open-below (count)
   "Open COUNT below, see https://github.com/haskell/haskell-mode/issues/1265."
