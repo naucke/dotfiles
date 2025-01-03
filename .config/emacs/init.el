@@ -11,6 +11,7 @@
 (server-start)
 (load-library "lilypond-mode")
 (load (concat user-emacs-directory "functions.el"))
+(require 'org-archive)
 ; Settings
 (setq
  auto-dark-dark-theme 'dracula
@@ -28,6 +29,13 @@
  lsp-haskell-plugin-stan-global-on nil
  markdown-command '("pandoc" "--from=markdown" "--to=html5")
  mouse-yank-at-point t
+ org-agenda-custom-commands
+   '(("n" "Agenda & TODOs" ((agenda) (alltodo)) ((org-agenda-tag-filter-preset '("-unsched"))))
+     ("r" "Review" ((agenda)) ((org-agenda-overriding-header "Done:")
+                               (org-agenda-start-day "-2d")
+                               (org-agenda-start-with-log-mode 'only)
+                               (org-agenda-log-mode-items '(closed state))
+                               (org-agenda-tag-filter-preset '("-nolog")))))
  org-agenda-files '("~/Documents/Nextcloud2/Orgzly")
  org-agenda-file-regexp ".+todo\\.org"
  org-agenda-show-future-repeats 'next
@@ -42,12 +50,14 @@
  org-enforce-todo-dependencies t
  org-extend-today-until 2
  org-latex-preview-ltxpng-directory "~/.cache/emacs/ltximg"
- org-log-repeat nil
+ org-log-done 'time
+ org-log-into-drawer t
  org-roam-directory (file-truename "~/Nextcloud/roam")
  org-roam-mode-sections (list 'org-roam-backlinks-section
                               'org-roam-reflinks-section
                               'org-roam-unlinked-references-section)
  org-roam-node-display-template "${title} ${tags}"
+ org-startup-folded 'show3
  org-src-fontify-natively t
  org-tags-column 0
  recentf-max-saved-items nil
