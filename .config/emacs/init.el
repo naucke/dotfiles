@@ -10,6 +10,7 @@
 ;;; Code:
 (server-start)
 (load-library "lilypond-mode")
+(load (concat user-emacs-directory "functions.el"))
 ; Settings
 (setq
  auto-dark-dark-theme 'dracula
@@ -188,27 +189,6 @@
                                           c-basic-offset 4)))
 (add-hook 'java-mode-hook (lambda () (setq indent-tabs-mode nil
                                            tab-stop-list (number-sequence 4 200 4))))
-
-(defun hly/evil-open-below (count)
-  "Open COUNT below, see https://github.com/haskell/haskell-mode/issues/1265."
-  (interactive "p")
-  (setq unread-command-events (listify-key-sequence (kbd "RET")))
-  (evil-append-line count))
-(defun hly/evil-open-above (count)
-  "Open COUNT above, see https://github.com/haskell/haskell-mode/issues/1265."
-  (interactive "p")
-  (forward-line -1)
-  (hly/evil-open-below count))
-(add-hook 'haskell-mode-hook (lambda () (progn (define-key evil-normal-state-map "o" 'hly/evil-open-below)
-                                               (define-key evil-normal-state-map "O" 'hly/evil-open-above)
-                                               (setq lsp-rename-use-prepare nil))))
-
-(load "~/.config/emacs/snippets/ol-textedit")
-(require 'ol-textedit)
-(load "~/.config/emacs/snippets/flyspell-envs")
-(require 'flyspell-envs)
-(load "~/.config/emacs/snippets/dollar-electric")
-(require 'dollar-electric)
 
 ; LaTeX
 (add-hook 'TeX-after-compilation-finished-functions 'TeX-revert-document-buffer)
