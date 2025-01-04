@@ -48,5 +48,13 @@
      (org-archive-subtree)
      (setq org-map-continue-from (org-element-property :begin (org-element-at-point))))
    "/DONE" 'agenda))
+
+(require 'ol)
+(defun org-textedit-open (path _)
+  "Open textedit link PATH with emacsclient."
+  (message path)
+  ; AFAICT org has really nice functionality for this... for things at point.
+  (string-match "^//\\(.+\\):\\([0-9]+:[0-9]+\\):[0-9]+$" path)
+  (call-process-shell-command (format "emacsclient +%s %s &" (match-string 2 path) (match-string 1 path)) nil 0))
 (provide 'functions)
 ;;; functions.el ends here

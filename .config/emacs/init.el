@@ -69,6 +69,7 @@
  LilyPond-pdf-command "emacsclient"
 )
 (setf (cdr (assoc 'file org-link-frame-setup)) 'find-file)
+(org-link-set-parameters "textedit" :follow #'org-textedit-open)
 (put 'magit-clean 'disabled nil)
 
 ; Keybinds
