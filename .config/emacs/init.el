@@ -30,7 +30,7 @@
  markdown-command '("pandoc" "--from=markdown" "--to=html5")
  mouse-yank-at-point t
  org-agenda-custom-commands
-   '(("n" "Agenda & TODOs" ((agenda) (alltodo)) ((org-agenda-tag-filter-preset '("-unsched"))))
+   '(("n" "Agenda & TODOs" ((agenda) (alltodo)))
      ("r" "Review" ((agenda)) ((org-agenda-overriding-header "Done:")
                                (org-agenda-start-day "-2d")
                                (org-agenda-start-with-log-mode 'only)
