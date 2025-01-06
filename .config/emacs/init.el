@@ -36,8 +36,7 @@
                                (org-agenda-start-with-log-mode 'only)
                                (org-agenda-log-mode-items '(closed state))
                                (org-agenda-tag-filter-preset '("-nolog")))))
- org-agenda-files '("~/Documents/Nextcloud2/Orgzly")
- org-agenda-file-regexp ".+todo\\.org"
+ org-agenda-files (file-expand-wildcards "~/Documents/Nextcloud2/Orgzly/*todo.org*")
  org-agenda-show-future-repeats 'next
  org-agenda-span 3
  org-agenda-start-on-weekday nil

@@ -47,7 +47,7 @@
    (lambda ()
      (org-archive-subtree)
      (setq org-map-continue-from (org-element-property :begin (org-element-at-point))))
-   "/DONE" 'agenda))
+   "/DONE" 'file))
 
 (require 'ol)
 (defun org-textedit-open (path _)
